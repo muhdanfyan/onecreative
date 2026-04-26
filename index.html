@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Creative - Sahabat Setia Semua Kebutuhan Anda</title>
-    <meta name="description" content="PT. ONE CREATIVE AIO - Solusi All-in-One untuk Keuangan, Logistik, Percetakan, dan Internet di Kota Bau-Bau.">
+    <title>One Creative — Sahabat Setia Semua Kebutuhan Anda</title>
+    <meta name="description" content="PT. ONE CREATIVE AIO — Desain kreatif tanpa batas dengan teknologi AI-Native.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="public/favicon.png">
@@ -12,190 +12,230 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fonts -->
+    <!-- Fonts: Inter & Outfit as equivalent replacements for WF Visual Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        :root {
+            --wf-blue: #146ef5;
+            --wf-blue-hover: #0055d4;
+            --near-black: #080808;
+            --gray-800: #222222;
+            --gray-300: #ababab;
+            --border-gray: #d8d8d8;
+            --purple: #7a3dff;
+            --pink: #ed52cb;
+            --green: #00d722;
+            --orange: #ff6b00;
+            --yellow: #ffae13;
+            --red: #ee1d36;
+            --shadow-stack: rgba(0,0,0,0) 0px 84px 24px, rgba(0,0,0,0.01) 0px 54px 22px, rgba(0,0,0,0.04) 0px 30px 18px, rgba(0,0,0,0.08) 0px 13px 13px, rgba(0,0,0,0.09) 0px 3px 7px;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: var(--near-black);
+            background-color: #ffffff;
+        }
+
+        h1, h2, h3, .font-display { 
+            font-family: 'Outfit', sans-serif; 
+        }
+
+        .wf-shadow { shadow: var(--shadow-stack); }
+        
+        .btn-primary {
+            background-color: var(--wf-blue);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 4px;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--wf-blue-hover);
+            transform: translate(0, -6px);
+        }
+
+        .card-wf {
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .card-wf:hover {
+            border-color: #898989;
+            box-shadow: var(--shadow-stack);
+        }
+
+        .label-uppercase {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-blue {
+            background-color: rgba(20, 110, 245, 0.1);
+            color: var(--wf-blue);
+            border-radius: 4px;
+            padding: 4px 12px;
+            font-size: 12.8px;
+            font-weight: 550;
+        }
     </style>
 </head>
-<body class="bg-white text-slate-900 selection:bg-cyan-100">
+<body class="selection:bg-blue-100">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-100">
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="img/logo.png" alt="One Creative Logo" class="h-10 w-auto">
-                <span class="font-extrabold text-xl tracking-tighter text-slate-900 uppercase">One Creative</span>
+            <div class="flex items-center gap-4">
+                <img src="img/logo.png" alt="One Creative Logo" class="h-8 w-auto">
+                <span class="font-bold text-lg tracking-tight uppercase" style="letter-spacing: 1px;">One Creative</span>
             </div>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#layanan" class="text-sm font-semibold hover:text-cyan-600 transition-colors">Layanan</a>
-                <a href="#tentang" class="text-sm font-semibold hover:text-cyan-600 transition-colors">Tentang Kami</a>
-                <a href="#kontak" class="text-sm font-semibold hover:text-cyan-600 transition-colors">Lokasi</a>
-                <a href="https://wa.me/6285796792110" target="_blank" class="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-cyan-600 transition-all shadow-lg shadow-cyan-100">Hubungi Kami</a>
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#layanan" class="text-[15px] font-medium text-slate-600 hover:text-black transition-colors">Layanan</a>
+                <a href="#tentang" class="text-[15px] font-medium text-slate-600 hover:text-black transition-colors">Visi Misi</a>
+                <a href="https://wa.me/6285796792110" target="_blank" class="btn-primary text-white px-6 py-2.5 text-sm font-semibold shadow-lg">Mulai Konsultasi</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
-        <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="inline-block px-4 py-1.5 bg-cyan-50 text-cyan-700 rounded-full text-xs font-bold uppercase tracking-widest mb-6">PT. ONE CREATIVE AIO</span>
-                <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight mb-8">
-                    Satu Solusi Untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Segala Kebutuhan</span> Anda.
-                </h1>
-                <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
-                    Hadir untuk memudahkan masyarakat Bau-Bau dalam mengakses layanan keuangan, logistik, percetakan, hingga kebutuhan digital dengan profesionalitas tinggi.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#layanan" class="bg-cyan-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-cyan-700 transition-all shadow-xl shadow-cyan-100">Eksplorasi Layanan</a>
-                    <a href="https://lynk.id/onecreative" target="_blank" class="border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all">Link in Bio</a>
+    <section class="pt-48 pb-32 px-6 border-b border-slate-100">
+        <div class="container mx-auto max-w-6xl text-center">
+            <div class="inline-flex items-center gap-2 mb-8">
+                <span class="badge-blue uppercase tracking-widest text-[10px]">New: Digital Transformation</span>
+            </div>
+            <h1 class="text-[56px] md:text-[80px] font-semibold leading-[1.04] tracking-[-0.8px] mb-8 max-w-4xl mx-auto">
+                Satu Solusi Untuk Segala <span style="color: var(--wf-blue);">Kebutuhan</span> Anda.
+            </h1>
+            <p class="text-[20px] text-[#5a5a5a] mb-12 max-w-2xl mx-auto leading-[1.5]">
+                PT. ONE CREATIVE AIO hadir di Bau-Bau untuk mendefinisikan ulang kemudahan akses layanan logistik, keuangan, dan digital.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#layanan" class="btn-primary text-white px-10 py-4 font-semibold text-lg">Eksplorasi Layanan</a>
+                <a href="https://lynk.id/onecreative" target="_blank" class="border border-slate-300 rounded-[4px] px-10 py-4 font-semibold text-lg hover:bg-slate-50 transition-all">Lihat Profil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="layanan" class="py-32 px-6 bg-slate-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div class="max-w-xl">
+                    <div class="label-uppercase text-blue-600 mb-4">Layanan Kami</div>
+                    <h2 class="text-[40px] md:text-[56px] font-semibold leading-[1.04]">Solusi Terintegrasi dalam Satu Atap.</h2>
+                </div>
+                <div class="pb-2">
+                    <p class="text-slate-500 max-w-sm">Efisiensi tanpa kompromi. Kami membangun infrastruktur layanan yang memudahkan hidup Anda setiap hari.</p>
                 </div>
             </div>
-            <div class="relative">
-                <div class="absolute -top-20 -right-20 w-64 h-64 bg-cyan-200 blur-3xl opacity-30 rounded-full animate-pulse"></div>
-                <div class="relative z-10 bg-white p-4 rounded-[2.5rem] shadow-2xl border border-slate-100">
-                    <img src="img/logo.png" alt="One Creative Office" class="rounded-[2rem] w-full h-auto">
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-100 rounded-[4px] flex items-center justify-center mb-8 text-2xl" style="color: var(--purple);">💸</div>
+                        <h3 class="text-[32px] font-medium leading-[1.3] mb-4">Keuangan & PPOB</h3>
+                        <p class="text-[#5a5a5a] text-lg leading-[1.5]">Transfer uang antar bank, isi pulsa, bayar tagihan bulanan (PLN, PDAM), hingga top up voucher game favorit Anda.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100">
+                        <span class="label-uppercase text-[12px] opacity-60">Instant Payment</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
+                    <div>
+                        <div class="w-12 h-12 bg-pink-100 rounded-[4px] flex items-center justify-center mb-8 text-2xl" style="color: var(--pink);">📦</div>
+                        <h3 class="text-[32px] font-medium leading-[1.3] mb-4">Logistik & Travel</h3>
+                        <p class="text-[#5a5a5a] text-lg leading-[1.5]">Kirim paket/kargo ke seluruh Indonesia. Reservasi tiket pesawat dan kapal laut (Pelni/Ferry) dengan proses cepat.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100">
+                        <span class="label-uppercase text-[12px] opacity-60">Fast Delivery</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
+                    <div>
+                        <div class="w-12 h-12 bg-green-100 rounded-[4px] flex items-center justify-center mb-8 text-2xl" style="color: var(--green);">🖨️</div>
+                        <h3 class="text-[32px] font-medium leading-[1.3] mb-4">Percetakan & Desain</h3>
+                        <p class="text-[#5a5a5a] text-lg leading-[1.5]">Cetak kartu nama, makalah, dan koleksi blangko undangan Erba 2024. Jasa edit foto dan dokumen profesional.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100">
+                        <span class="label-uppercase text-[12px] opacity-60">High Quality Print</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
+                    <div>
+                        <div class="w-12 h-12 bg-orange-100 rounded-[4px] flex items-center justify-center mb-8 text-2xl" style="color: var(--orange);">🌐</div>
+                        <h3 class="text-[32px] font-medium leading-[1.3] mb-4">Internet Service</h3>
+                        <p class="text-[#5a5a5a] text-lg leading-[1.5]">Penyediaan akses internet cepat melalui WiFi Hotspot. Pendaftaran kemitraan K-Mart dan edukasi digital.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100">
+                        <span class="label-uppercase text-[12px] opacity-60">Always Connected</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="layanan" class="py-24 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold mb-4">Layanan Unggulan</h2>
-                <p class="text-slate-500">Kami menyediakan berbagai solusi integratif untuk mendukung produktivitas Anda.</p>
-                <div class="w-16 h-1.5 bg-cyan-600 mx-auto mt-6 rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Service 1 -->
-                <div class="p-8 bg-white border border-slate-100 rounded-3xl hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-50 transition-all group">
-                    <div class="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-colors text-cyan-600">💸</div>
-                    <h3 class="text-xl font-bold mb-4">Keuangan & PPOB</h3>
-                    <ul class="text-slate-500 text-sm space-y-2 leading-relaxed">
-                        <li>• Transfer Uang Antar Bank</li>
-                        <li>• Isi Pulsa & Paket Data</li>
-                        <li>• Bayar PLN, PDAM, BPJS</li>
-                        <li>• Top Up Voucher Game</li>
-                    </ul>
+    <!-- Misi Section -->
+    <section id="tentang" class="py-32 px-6">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="label-uppercase text-slate-400 mb-8">Filosofi Kami</div>
+            <h2 class="text-[40px] md:text-[56px] font-semibold leading-[1.1] mb-12 italic">"Misi kami adalah memberikan kemudahan bagi setiap lapisan masyarakat."</h2>
+            <div class="grid md:grid-cols-3 gap-12 pt-12 border-t border-slate-100">
+                <div>
+                    <div class="text-[40px] font-semibold mb-2">08.30</div>
+                    <div class="label-uppercase text-[10px] text-slate-400">Jam Buka</div>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="p-8 bg-white border border-slate-100 rounded-3xl hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-50 transition-all group text-justify">
-                    <div class="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-colors text-cyan-600">📦</div>
-                    <h3 class="text-xl font-bold mb-4">Logistik & Travel</h3>
-                    <ul class="text-slate-500 text-sm space-y-2 leading-relaxed">
-                        <li>• Pengiriman Paket & Kargo</li>
-                        <li>• Tiket Kapal Pelni/Ferry</li>
-                        <li>• Tiket Pesawat Semua Rute</li>
-                        <li>• Dokumen Penting</li>
-                    </ul>
+                <div>
+                    <div class="text-[40px] font-semibold mb-2" style="color: var(--wf-blue);">22.00</div>
+                    <div class="label-uppercase text-[10px] text-slate-400">Jam Tutup</div>
                 </div>
-
-                <!-- Service 3 -->
-                <div class="p-8 bg-white border border-slate-100 rounded-3xl hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-50 transition-all group">
-                    <div class="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-colors text-cyan-600">🖨️</div>
-                    <h3 class="text-xl font-bold mb-4">Percetakan & Desain</h3>
-                    <ul class="text-slate-500 text-sm space-y-2 leading-relaxed">
-                        <li>• Cetak Kartu Nama & Makalah</li>
-                        <li>• Blangko Undangan Erba 2024</li>
-                        <li>• Jilid & Alat Tulis Kantor</li>
-                        <li>• Edit Foto & Dokumen</li>
-                    </ul>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="p-8 bg-white border border-slate-100 rounded-3xl hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-50 transition-all group">
-                    <div class="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-colors text-cyan-600">🌐</div>
-                    <h3 class="text-xl font-bold mb-4">Internet Service</h3>
-                    <ul class="text-slate-500 text-sm space-y-2 leading-relaxed">
-                        <li>• Akses Internet Cepat</li>
-                        <li>• WiFi Hotspot</li>
-                        <li>• Pendaftaran Mitra K-Mart</li>
-                        <li>• Edukasi Bisnis Digital</li>
-                    </ul>
+                <div>
+                    <div class="text-[40px] font-semibold mb-2">365</div>
+                    <div class="label-uppercase text-[10px] text-slate-400">Hari Melayani</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Info Section -->
-    <section id="tentang" class="py-20 bg-slate-900 text-white rounded-[3rem] mx-6">
-        <div class="container mx-auto px-10 grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl font-extrabold mb-6 leading-tight">Misi Kami Adalah Memberikan Kemudahan Bagi Anda</h2>
-                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                    Kami percaya bahwa akses terhadap layanan perbankan, logistik, dan digital haruslah mudah bagi setiap lapisan masyarakat. Dengan visi menjadi sahabat setia kebutuhan harian Anda, One Creative terus berinovasi dalam pelayanan.
-                </p>
-                <div class="flex items-center gap-6">
+    <!-- CTA / Footer -->
+    <footer class="bg-black text-white pt-32 pb-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-20 mb-32">
+                <div>
+                    <h2 class="text-[40px] md:text-[56px] font-semibold leading-[1.04] mb-10">Siap untuk mulai?<br>Hubungi tim kami.</h2>
+                    <a href="https://wa.me/6285796792110" class="btn-primary inline-block px-10 py-5 text-xl font-bold">Kirim Pesan WhatsApp</a>
+                </div>
+                <div class="flex flex-col justify-between">
                     <div>
-                        <div class="text-3xl font-extrabold text-cyan-400">08.30</div>
-                        <div class="text-sm text-slate-500 uppercase tracking-widest">Jam Buka</div>
+                        <div class="label-uppercase text-slate-500 mb-6">Kantor Pusat</div>
+                        <p class="text-2xl font-medium leading-relaxed">Jl. Gajah Mada, Lipu, Kec. Betoambari,<br>Kota Bau-Bau, Sulawesi Tenggara.</p>
                     </div>
-                    <div class="w-px h-10 bg-slate-800"></div>
-                    <div>
-                        <div class="text-3xl font-extrabold text-cyan-400">22.00</div>
-                        <div class="text-sm text-slate-500 uppercase tracking-widest">Jam Tutup</div>
+                    <div class="flex gap-10 mt-12">
+                        <a href="https://instagram.com/iwan.lipoetra" class="text-slate-400 hover:text-white transition-colors">Instagram</a>
+                        <a href="https://facebook.com" class="text-slate-400 hover:text-white transition-colors">Facebook</a>
+                        <a href="https://youtube.com" class="text-slate-400 hover:text-white transition-colors">YouTube</a>
                     </div>
                 </div>
             </div>
-            <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
-                <div class="flex items-start gap-4 mb-6">
-                    <div class="text-2xl">📍</div>
-                    <div>
-                        <div class="font-bold text-xl mb-1">Lokasi Kami</div>
-                        <p class="text-slate-400 text-sm italic">Jl. Gajah Mada, Lipu, Kec. Betoambari, Kota Bau-Bau, Sulawesi Tenggara.</p>
-                    </div>
+            <div class="pt-16 border-t border-slate-800 flex flex-col md:flex-row justify-between gap-8">
+                <div class="flex items-center gap-4 opacity-50 grayscale contrast-200">
+                    <img src="img/logo.png" alt="Logo" class="h-6">
+                    <span class="font-bold text-sm uppercase tracking-widest">PT. ONE CREATIVE AIO</span>
                 </div>
-                <a href="https://maps.google.com" target="_blank" class="block w-full text-center bg-white text-slate-900 py-4 rounded-2xl font-bold hover:bg-cyan-400 transition-colors">Buka Google Maps</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="kontak" class="pt-24 pb-12 px-6">
-        <div class="container mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 mb-16">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="img/logo.png" alt="Logo" class="h-8">
-                        <span class="font-extrabold text-lg uppercase">One Creative</span>
-                    </div>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
-                        PT. ONE CREATIVE AIO - Melayani dengan hati untuk semua kebutuhan administratif, finansial, dan perjalanan Anda.
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="https://www.facebook.com/hamidsahirudin.iwan/" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-all">FB</a>
-                        <a href="https://www.instagram.com/iwan.lipoetra/" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-all">IG</a>
-                        <a href="https://www.youtube.com/watch?v=fdk8niTzUD8" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-all">YT</a>
-                    </div>
+                <div class="text-slate-500 text-sm">
+                    &copy; 2026 One Creative. Inspired by Webflow. Built for Success.
                 </div>
-                <div>
-                    <h4 class="font-bold mb-6">Kontak Cepat</h4>
-                    <ul class="text-slate-500 text-sm space-y-4">
-                        <li>WhatsApp 1: +62 857-9679-2110</li>
-                        <li>WhatsApp 2: +62 852-4225-5703</li>
-                        <li>Email: info@onecreative.aio</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6">Kemitraan</h4>
-                    <ul class="text-slate-500 text-sm space-y-4">
-                        <li>Market Pulsa: Referral GEV94</li>
-                        <li>K-Mart: Referral one_creative</li>
-                        <li>International Travel Agent</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-12 border-t border-slate-100 text-center text-sm text-slate-400">
-                &copy; 2026 PT. ONE CREATIVE AIO. All rights reserved.
             </div>
         </div>
     </footer>
