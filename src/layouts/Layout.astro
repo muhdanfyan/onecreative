@@ -7,6 +7,9 @@ interface Props {
 }
 
 const { title, description = "One Creative Bau-Bau: Solusi digital terlengkap! Percetakan, desain grafis, bayar tagihan (PPOB), tiket pesawat last minute, agen PELNI, top up game murah, & ekspedisi paket." } = Astro.props;
+const siteUrl = "https://www.onecreative.id";
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 ---
 
 <!doctype html>
@@ -17,34 +20,46 @@ const { title, description = "One Creative Bau-Bau: Solusi digital terlengkap! P
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		
-		<!-- SEO Meta Tags -->
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 		<meta name="keywords" content="percetakan bau-bau, jasa desain grafis bau-bau, bayar tagihan listrik bau-bau, tiket pesawat last minute, top up mlbb murah bau-bau, cetak undangan bau-bau, agen pelni bau-bau, ekspedisi paket bau-bau, one creative bau-bau" />
 		<meta name="author" content="One Creative ID" />
 		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={canonicalURL} />
 
-		<!-- Open Graph / Facebook -->
+		<!-- Open Graph / Facebook (Rich Link Preview) -->
 		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/img/hero-bg.png" />
+		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="One Creative Bau-Bau" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageURL} />
 
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
 
-		<!-- JSON-LD Structured Data -->
+		<!-- JSON-LD Structured Data (Local Business) -->
 		<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
 		  "@type": "LocalBusiness",
 		  "name": "One Creative",
-		  "image": "https://onecreative.id/img/logo.png",
-		  "@id": "https://onecreative.id",
-		  "url": "https://onecreative.id",
+		  "image": "https://www.onecreative.id/img/logo.png",
+		  "@id": "https://www.onecreative.id",
+		  "url": "https://www.onecreative.id",
 		  "telephone": "+6285796792110",
 		  "address": {
 			"@type": "PostalAddress",
@@ -72,7 +87,12 @@ const { title, description = "One Creative Bau-Bau: Solusi digital terlengkap! P
 			],
 			"opens": "08:30",
 			"closes": "22:00"
-		  }
+		  },
+		  "sameAs": [
+			"https://www.facebook.com/hamidsahirudin.iwan/",
+			"https://www.instagram.com/iwan.lipoetra/",
+			"https://www.youtube.com/watch?v=fdk8niTzUD8"
+		  ]
 		}
 		</script>
 	</head>
