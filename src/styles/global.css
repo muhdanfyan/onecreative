@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --wf-blue: #4fbed4;
+    --wf-blue-hover: #3daec4;
+    --near-black: #080808;
+    --border-gray: #d8d8d8;
+    --shadow-stack: rgba(0,0,0,0) 0px 84px 24px, rgba(0,0,0,0.01) 0px 54px 22px, rgba(0,0,0,0.04) 0px 30px 18px, rgba(0,0,0,0.08) 0px 13px 13px, rgba(0,0,0,0.09) 0px 3px 7px;
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    color: var(--near-black); 
+    background-color: #ffffff; 
+}
+
+h1, h2, h3, .font-display { 
+    font-family: 'Outfit', sans-serif; 
+}
+
+.btn-primary {
+    background-color: var(--wf-blue);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: var(--wf-blue-hover);
+    transform: translate(0, -6px);
+}
+
+.card-wf {
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card-wf:hover {
+    border-color: #898989;
+    box-shadow: var(--shadow-stack);
+}
+
+.label-uppercase {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}

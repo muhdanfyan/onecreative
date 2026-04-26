@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "One Creative Bau-Bau: Solusi digital terlengkap! Percetakan, desain grafis, bayar tagihan (PPOB), tiket pesawat last minute, agen PELNI, top up game murah, & ekspedisi paket." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="percetakan bau-bau, jasa desain grafis bau-bau, bayar tagihan listrik bau-bau, tiket pesawat last minute, top up mlbb murah bau-bau, cetak undangan bau-bau, agen pelni bau-bau, ekspedisi paket bau-bau, one creative bau-bau" />
+		<meta name="author" content="One Creative ID" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/img/hero-bg.png" />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+
+		<!-- JSON-LD Structured Data -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "name": "One Creative",
+		  "image": "https://onecreative.id/img/logo.png",
+		  "@id": "https://onecreative.id",
+		  "url": "https://onecreative.id",
+		  "telephone": "+6285796792110",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "Jl. Gajah Mada, Lipu, Kec. Betoambari",
+			"addressLocality": "Bau-Bau",
+			"addressRegion": "Sulawesi Tenggara",
+			"postalCode": "93721",
+			"addressCountry": "ID"
+		  },
+		  "geo": {
+			"@type": "GeoCoordinates",
+			"latitude": -5.4751928,
+			"longitude": 122.5882712
+		  },
+		  "openingHoursSpecification": {
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+			  "Monday",
+			  "Tuesday",
+			  "Wednesday",
+			  "Thursday",
+			  "Friday",
+			  "Saturday",
+			  "Sunday"
+			],
+			"opens": "08:30",
+			"closes": "22:00"
+		  }
+		}
+		</script>
+	</head>
+	<body class="selection:bg-[#4fbed4]/20">
+		<slot />
+	</body>
+</html>
