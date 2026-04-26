@@ -12,80 +12,48 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fonts: Inter & Outfit as equivalent replacements for WF Visual Sans -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --wf-blue: #146ef5;
-            --wf-blue-hover: #0055d4;
+            --wf-blue: #4fbed4;
+            --wf-blue-hover: #3daec4;
             --near-black: #080808;
-            --gray-800: #222222;
-            --gray-300: #ababab;
             --border-gray: #d8d8d8;
-            --purple: #7a3dff;
-            --pink: #ed52cb;
-            --green: #00d722;
-            --orange: #ff6b00;
-            --yellow: #ffae13;
-            --red: #ee1d36;
             --shadow-stack: rgba(0,0,0,0) 0px 84px 24px, rgba(0,0,0,0.01) 0px 54px 22px, rgba(0,0,0,0.04) 0px 30px 18px, rgba(0,0,0,0.08) 0px 13px 13px, rgba(0,0,0,0.09) 0px 3px 7px;
         }
-
-        body { 
-            font-family: 'Inter', sans-serif; 
-            color: var(--near-black);
-            background-color: #ffffff;
-        }
-
-        h1, h2, h3, .font-display { 
-            font-family: 'Outfit', sans-serif; 
-        }
-
-        .wf-shadow { shadow: var(--shadow-stack); }
-        
+        body { font-family: 'Inter', sans-serif; color: var(--near-black); background-color: #ffffff; }
+        h1, h2, h3, .font-display { font-family: 'Outfit', sans-serif; }
         .btn-primary {
             background-color: var(--wf-blue);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 4px;
         }
-        
         .btn-primary:hover {
             background-color: var(--wf-blue-hover);
             transform: translate(0, -6px);
         }
-
         .card-wf {
             border: 1px solid var(--border-gray);
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-
         .card-wf:hover {
             border-color: #898989;
             box-shadow: var(--shadow-stack);
         }
-
         .label-uppercase {
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 1.5px;
             text-transform: uppercase;
         }
-
-        .badge-blue {
-            background-color: rgba(20, 110, 245, 0.1);
-            color: var(--wf-blue);
-            border-radius: 4px;
-            padding: 4px 12px;
-            font-size: 12.8px;
-            font-weight: 550;
-        }
     </style>
 </head>
-<body class="selection:bg-blue-100">
+<body class="selection:bg-[#4fbed4]/20">
 
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
@@ -96,27 +64,33 @@
             </div>
             <div class="hidden md:flex items-center gap-10">
                 <a href="#layanan" class="text-[15px] font-medium text-slate-600 hover:text-black transition-colors">Layanan</a>
+                <a href="#produk" class="text-[15px] font-medium text-slate-600 hover:text-black transition-colors">Produk</a>
                 <a href="#tentang" class="text-[15px] font-medium text-slate-600 hover:text-black transition-colors">Visi Misi</a>
+                <a href="#lokasi" class="text-[15px] font-medium text-slate-600 hover:text-black transition-colors">Lokasi</a>
                 <a href="https://wa.me/6285796792110" target="_blank" class="btn-primary text-white px-6 py-2.5 text-sm font-semibold shadow-lg">Mulai Konsultasi</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-48 pb-32 px-6 border-b border-slate-100">
-        <div class="container mx-auto max-w-6xl text-center">
+    <section class="relative pt-64 pb-48 px-6 overflow-hidden flex items-center min-h-[90vh]">
+        <div class="absolute inset-0 z-0">
+            <img src="img/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+        </div>
+        <div class="container mx-auto max-w-6xl text-center relative z-10 text-white">
             <div class="inline-flex items-center gap-2 mb-8">
-                <span class="badge-blue uppercase tracking-widest text-[10px]">New: Digital Transformation</span>
+                <span class="bg-white/20 text-white border border-white/30 px-3 py-1 rounded-full uppercase tracking-widest text-[10px]">New: Digital Transformation</span>
             </div>
             <h1 class="text-[56px] md:text-[80px] font-semibold leading-[1.04] tracking-[-0.8px] mb-8 max-w-4xl mx-auto">
                 Satu Solusi Untuk Segala <span style="color: var(--wf-blue);">Kebutuhan</span> Anda.
             </h1>
-            <p class="text-[20px] text-[#5a5a5a] mb-12 max-w-2xl mx-auto leading-[1.5]">
+            <p class="text-[20px] text-white/80 mb-12 max-w-2xl mx-auto leading-[1.5]">
                 PT. ONE CREATIVE AIO hadir di Bau-Bau untuk mendefinisikan ulang kemudahan akses layanan logistik, keuangan, dan digital.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#layanan" class="btn-primary text-white px-10 py-4 font-semibold text-lg">Eksplorasi Layanan</a>
-                <a href="https://lynk.id/onecreative" target="_blank" class="border border-slate-300 rounded-[4px] px-10 py-4 font-semibold text-lg hover:bg-slate-50 transition-all">Lihat Profil</a>
+                <a href="#layanan" class="btn-primary text-white px-10 py-4 font-semibold text-lg shadow-xl shadow-[#4fbed4]/20">Eksplorasi Layanan</a>
+                <a href="https://lynk.id/onecreative" target="_blank" class="border border-white/30 rounded-[4px] px-10 py-4 font-semibold text-lg hover:bg-white/10 transition-all backdrop-blur-sm">Lihat Profil</a>
             </div>
         </div>
     </section>
@@ -126,61 +100,132 @@
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
                 <div class="max-w-xl">
-                    <div class="label-uppercase text-blue-600 mb-4">Layanan Kami</div>
+                    <div class="label-uppercase mb-4" style="color: var(--wf-blue);">Layanan Kami</div>
                     <h2 class="text-[40px] md:text-[56px] font-semibold leading-[1.04]">Solusi Terintegrasi dalam Satu Atap.</h2>
                 </div>
-                <div class="pb-2">
-                    <p class="text-slate-500 max-w-sm">Efisiensi tanpa kompromi. Kami membangun infrastruktur layanan yang memudahkan hidup Anda setiap hari.</p>
+                <div class="pb-2 text-slate-500 max-w-sm">Efisiensi tanpa kompromi. Kami membangun infrastruktur layanan yang memudahkan hidup Anda.</div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
+                    <div><div class="text-2xl mb-8">💸</div><h3 class="text-[32px] font-medium mb-4">Keuangan & PPOB</h3><p class="text-slate-500 text-lg">Transfer bank, isi pulsa, bayar tagihan bulanan instan.</p></div>
+                    <div class="pt-6 border-t border-slate-100 text-xs font-bold uppercase tracking-widest text-slate-300">Instant Payment</div>
+                </div>
+                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
+                    <div><div class="text-2xl mb-8">📦</div><h3 class="text-[32px] font-medium mb-4">Logistik & Travel</h3><p class="text-slate-500 text-lg">Kirim paket ke seluruh RI & reservasi tiket pesawat/kapal.</p></div>
+                    <div class="pt-6 border-t border-slate-100 text-xs font-bold uppercase tracking-widest text-slate-300">Fast Delivery</div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Card 1 -->
-                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
-                    <div>
-                        <div class="w-12 h-12 bg-indigo-100 rounded-[4px] flex items-center justify-center mb-8 text-2xl" style="color: var(--purple);">💸</div>
-                        <h3 class="text-[32px] font-medium leading-[1.3] mb-4">Keuangan & PPOB</h3>
-                        <p class="text-[#5a5a5a] text-lg leading-[1.5]">Transfer uang antar bank, isi pulsa, bayar tagihan bulanan (PLN, PDAM), hingga top up voucher game favorit Anda.</p>
+    <!-- Products Section -->
+    <section id="produk" class="py-32 px-6">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-20">
+                <div class="label-uppercase text-slate-400 mb-4">Katalog Layanan</div>
+                <h2 class="text-[40px] md:text-[56px] font-semibold leading-[1.04] mb-6">Pilihan Terbaik Untuk Anda.</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto text-lg">Semua kebutuhan digital dalam satu genggaman. Cepat, aman, dan profesional.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1: Print & Editing -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-print.png" alt="Print & Editing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 1k - 2k</span></div>
                     </div>
-                    <div class="pt-6 border-t border-slate-100">
-                        <span class="label-uppercase text-[12px] opacity-60">Instant Payment</span>
-                    </div>
+                    <h3 class="text-lg font-bold mb-2">Print & Editing</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Edit dokumen & cetak foto kualitas jempolan dengan mesin terbaru.</p>
+                    <a href="produk.html?id=print-editing" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
-                    <div>
-                        <div class="w-12 h-12 bg-pink-100 rounded-[4px] flex items-center justify-center mb-8 text-2xl" style="color: var(--pink);">📦</div>
-                        <h3 class="text-[32px] font-medium leading-[1.3] mb-4">Logistik & Travel</h3>
-                        <p class="text-[#5a5a5a] text-lg leading-[1.5]">Kirim paket/kargo ke seluruh Indonesia. Reservasi tiket pesawat dan kapal laut (Pelni/Ferry) dengan proses cepat.</p>
+                <!-- Product 2: Internet & TV -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-billing.png" alt="Internet & TV" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 250k - 350k</span></div>
                     </div>
-                    <div class="pt-6 border-t border-slate-100">
-                        <span class="label-uppercase text-[12px] opacity-60">Fast Delivery</span>
-                    </div>
+                    <h3 class="text-lg font-bold mb-2">Internet & TV Kabel</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Bebas nonton & internetan. Bayar Indihome, MNC Vision, dll.</p>
+                    <a href="produk.html?id=billing-tv" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
-                    <div>
-                        <div class="w-12 h-12 bg-green-100 rounded-[4px] flex items-center justify-center mb-8 text-2xl" style="color: var(--green);">🖨️</div>
-                        <h3 class="text-[32px] font-medium leading-[1.3] mb-4">Percetakan & Desain</h3>
-                        <p class="text-[#5a5a5a] text-lg leading-[1.5]">Cetak kartu nama, makalah, dan koleksi blangko undangan Erba 2024. Jasa edit foto dan dokumen profesional.</p>
+                <!-- Product 3: One Stop Digital -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-services.png" alt="Digital Solution" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 5k - 10k</span></div>
                     </div>
-                    <div class="pt-6 border-t border-slate-100">
-                        <span class="label-uppercase text-[12px] opacity-60">High Quality Print</span>
-                    </div>
+                    <h3 class="text-lg font-bold mb-2">One Stop Digital</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Tiket, Hotel, Umroh, Topup E-Wallet, & Pembayaran Tagihan.</p>
+                    <a href="produk.html?id=digital-solution" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
                 </div>
-
-                <!-- Card 4 -->
-                <div class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
-                    <div>
-                        <div class="w-12 h-12 bg-orange-100 rounded-[4px] flex items-center justify-center mb-8 text-2xl" style="color: var(--orange);">🌐</div>
-                        <h3 class="text-[32px] font-medium leading-[1.3] mb-4">Internet Service</h3>
-                        <p class="text-[#5a5a5a] text-lg leading-[1.5]">Penyediaan akses internet cepat melalui WiFi Hotspot. Pendaftaran kemitraan K-Mart dan edukasi digital.</p>
+                <!-- Product 4: Bayar Tagihan -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-pln.png" alt="Bayar Tagihan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 20k - 100k</span></div>
                     </div>
-                    <div class="pt-6 border-t border-slate-100">
-                        <span class="label-uppercase text-[12px] opacity-60">Always Connected</span>
+                    <h3 class="text-lg font-bold mb-2">Bayar Tagihan</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Bayar PLN, PDAM, Gas PGN & BPJS. Hidup tenang, tagihan lancar.</p>
+                    <a href="produk.html?id=bayar-tagihan" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
+                </div>
+                <!-- Product 5: Top Up Games -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-games.png" alt="Top Up Games" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 5k - 10k</span></div>
                     </div>
+                    <h3 class="text-lg font-bold mb-2">Top Up Games</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Top up Diamonds MLBB, FF, PUBG & Voucher Steam Hemat.</p>
+                    <a href="produk.html?id=topup-games" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
+                </div>
+                <!-- Product 6: Cetak Undangan -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-undangan.png" alt="Cetak Undangan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 2k - 2.5k</span></div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Cetak Undangan</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Desain unik Erba 2024 untuk Pernikahan & Khitanan.</p>
+                    <a href="produk.html?id=cetak-undangan" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
+                </div>
+                <!-- Product 7: Last Minute -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-last-minute.png" alt="Tiket Last Minute" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 910k - 924k</span></div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Flight Last Minute</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Boking tiket 60 menit sebelum take-off. Khusus Lion Group.</p>
+                    <a href="produk.html?id=tiket-last-minute" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
+                </div>
+                <!-- Product 8: Flight Int & Dom -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-flights.png" alt="Flight Tickets" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 924k - 1.6M</span></div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Tiket Pesawat</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Pilihan 187+ maskapai domestik & internasional.</p>
+                    <a href="produk.html?id=tiket-pesawat" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
+                </div>
+                <!-- Product 9: Pelni -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-pelni.png" alt="Tiket Pelni" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 143k - 197k</span></div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Tiket Kapal PELNI</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Booking tiket kapal laut gampang, tinggal duduk manis.</p>
+                    <a href="produk.html?id=pelni" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
+                </div>
+                <!-- Product 10: Express -->
+                <div class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
+                        <img src="img/product-express.png" alt="One Creative Express" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">Rp 25k - 85k</span></div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Creative Express</h3>
+                    <p class="text-slate-500 text-xs mb-6 line-clamp-2">Kirim paket pickup gratis. Banyak pilihan ekspedisi.</p>
+                    <a href="produk.html?id=express" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">Detail Layanan</a>
                 </div>
             </div>
         </div>
@@ -190,55 +235,44 @@
     <section id="tentang" class="py-32 px-6">
         <div class="container mx-auto max-w-4xl text-center">
             <div class="label-uppercase text-slate-400 mb-8">Filosofi Kami</div>
-            <h2 class="text-[40px] md:text-[56px] font-semibold leading-[1.1] mb-12 italic">"Misi kami adalah memberikan kemudahan bagi setiap lapisan masyarakat."</h2>
+            <h2 class="text-[40px] md:text-[56px] font-semibold mb-12 italic">"Misi kami adalah memberikan kemudahan bagi setiap lapisan masyarakat."</h2>
             <div class="grid md:grid-cols-3 gap-12 pt-12 border-t border-slate-100">
-                <div>
-                    <div class="text-[40px] font-semibold mb-2">08.30</div>
-                    <div class="label-uppercase text-[10px] text-slate-400">Jam Buka</div>
-                </div>
-                <div>
-                    <div class="text-[40px] font-semibold mb-2" style="color: var(--wf-blue);">22.00</div>
-                    <div class="label-uppercase text-[10px] text-slate-400">Jam Tutup</div>
-                </div>
-                <div>
-                    <div class="text-[40px] font-semibold mb-2">365</div>
-                    <div class="label-uppercase text-[10px] text-slate-400">Hari Melayani</div>
-                </div>
+                <div><div class="text-[40px] font-semibold mb-2">08.30</div><div class="label-uppercase text-[10px] text-slate-400">Jam Buka</div></div>
+                <div><div class="text-[40px] font-semibold mb-2" style="color: var(--wf-blue);">22.00</div><div class="label-uppercase text-[10px] text-slate-400">Jam Tutup</div></div>
+                <div><div class="text-[40px] font-semibold mb-2">365</div><div class="label-uppercase text-[10px] text-slate-400">Hari Melayani</div></div>
             </div>
         </div>
     </section>
 
-    <!-- CTA / Footer -->
+    <!-- Map Section -->
+    <section id="lokasi" class="py-32 px-6 bg-white border-t border-slate-100">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16"><div class="label-uppercase text-slate-400 mb-4">Kunjungi Kami</div><h2 class="text-[40px] md:text-[56px] font-semibold">Lokasi Strategis.</h2></div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl h-[500px] w-full">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.6151857883087!2d122.58827119999998!3d-5.4751928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da476d381c0e563%3A0x5fdf4f23b6deedb4!2sOne%20Creative!5e0!3m2!1sid!2sid!4v1777220328774!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
+            </div>
+            <div class="mt-8 text-center"><a href="https://maps.app.goo.gl/t4Mp99gHDyxprN2i8" target="_blank" class="text-blue-500 font-semibold hover:underline">Buka di Google Maps &rarr;</a></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-black text-white pt-32 pb-16 px-6">
         <div class="container mx-auto max-w-6xl">
             <div class="grid md:grid-cols-2 gap-20 mb-32">
-                <div>
-                    <h2 class="text-[40px] md:text-[56px] font-semibold leading-[1.04] mb-10">Siap untuk mulai?<br>Hubungi tim kami.</h2>
-                    <a href="https://wa.me/6285796792110" class="btn-primary inline-block px-10 py-5 text-xl font-bold">Kirim Pesan WhatsApp</a>
-                </div>
+                <div><h2 class="text-[40px] md:text-[56px] font-semibold mb-10">Siap untuk mulai?<br>Hubungi tim kami.</h2><a href="https://wa.me/6285796792110" class="btn-primary inline-block px-10 py-5 text-xl font-bold">Kirim Pesan WhatsApp</a></div>
                 <div class="flex flex-col justify-between">
-                    <div>
-                        <div class="label-uppercase text-slate-500 mb-6">Kantor Pusat</div>
-                        <p class="text-2xl font-medium leading-relaxed">Jl. Gajah Mada, Lipu, Kec. Betoambari,<br>Kota Bau-Bau, Sulawesi Tenggara.</p>
-                    </div>
+                    <div><div class="label-uppercase text-slate-500 mb-6">Kantor Pusat</div><p class="text-2xl font-medium">Jl. Gajah Mada, Lipu, Kec. Betoambari,<br>Kota Bau-Bau, Sulawesi Tenggara.</p></div>
                     <div class="flex gap-10 mt-12">
                         <a href="https://instagram.com/iwan.lipoetra" class="text-slate-400 hover:text-white transition-colors">Instagram</a>
                         <a href="https://facebook.com" class="text-slate-400 hover:text-white transition-colors">Facebook</a>
-                        <a href="https://youtube.com" class="text-slate-400 hover:text-white transition-colors">YouTube</a>
                     </div>
                 </div>
             </div>
-            <div class="pt-16 border-t border-slate-800 flex flex-col md:flex-row justify-between gap-8">
-                <div class="flex items-center gap-4 opacity-50 grayscale contrast-200">
-                    <img src="img/logo.png" alt="Logo" class="h-6">
-                    <span class="font-bold text-sm uppercase tracking-widest">PT. ONE CREATIVE AIO</span>
-                </div>
-                <div class="text-slate-500 text-sm">
-                    &copy; 2026 One Creative. Inspired by Webflow. Built for Success.
-                </div>
+            <div class="pt-16 border-t border-slate-800 flex justify-between items-center opacity-50">
+                <div class="flex items-center gap-4"><img src="img/logo.png" alt="Logo" class="h-6"><span class="font-bold text-sm uppercase tracking-widest">PT. ONE CREATIVE AIO</span></div>
+                <div class="text-xs">&copy; 2026 One Creative.</div>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

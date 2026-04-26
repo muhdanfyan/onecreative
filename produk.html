@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Detail Produk — One Creative</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/favicon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --wf-blue: #4fbed4;
+            --wf-blue-hover: #3daec4;
+            --near-black: #080808;
+            --border-gray: #d8d8d8;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--near-black); }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        .btn-primary {
+            background-color: var(--wf-blue);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 4px;
+        }
+        .btn-primary:hover {
+            background-color: var(--wf-blue-hover);
+            transform: translate(0, -4px);
+        }
+        .label-uppercase {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-4">
+                <img src="img/logo.png" alt="One Creative Logo" class="h-8 w-auto">
+                <span class="font-bold text-lg tracking-tight uppercase" style="letter-spacing: 1px;">One Creative</span>
+            </a>
+            <a href="index.html#produk" class="text-sm font-semibold text-slate-600 hover:text-black">Kembali ke Produk</a>
+        </div>
+    </nav>
+
+    <!-- Product Detail Content -->
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                
+                <!-- Product Image -->
+                <div class="sticky top-32">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
+                        <img id="product-image" src="" alt="Product Image" class="w-full aspect-square object-cover">
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div>
+                    <div id="product-badge" class="inline-block bg-[#4fbed4]/10 text-[#4fbed4] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                        Layanan Unggulan
+                    </div>
+                    <h1 id="product-name" class="text-[40px] md:text-[56px] font-semibold leading-tight mb-4">
+                        Loading...
+                    </h1>
+                    <div class="flex items-center gap-4 mb-8">
+                        <span id="product-price-old" class="text-xl text-slate-400 line-through"></span>
+                        <span id="product-price-new" class="text-3xl font-bold text-[#4fbed4]"></span>
+                    </div>
+
+                    <div id="product-description" class="text-lg text-slate-600 leading-relaxed mb-10 space-y-4">
+                        <!-- Content injected here -->
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <a id="whatsapp-link" href="" target="_blank" class="btn-primary text-white text-center py-5 rounded-lg font-bold text-xl shadow-xl shadow-[#4fbed4]/20">
+                            Pesan via WhatsApp
+                        </a>
+                        <p class="text-center text-sm text-slate-400">Proses cepat, aman, dan terpercaya.</p>
+                    </div>
+
+                    <!-- Features Section -->
+                    <div id="product-features" class="mt-16 pt-16 border-t border-slate-100 grid gap-8">
+                        <!-- Features injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-12 border-t border-slate-200">
+        <div class="container mx-auto px-6 text-center text-slate-400 text-sm">
+            &copy; 2026 One Creative. Solusi Digital Terpercaya.
+        </div>
+    </footer>
+
+    <script>
+        const products = {
+            'print-editing': {
+                name: 'Print & Editing',
+                badge: 'Digital Transformation',
+                priceOld: 'Rp 2.000,00',
+                priceNew: 'Rp 1.000,00',
+                image: 'img/product-print.png',
+                description: `
+                    <p class="font-bold text-slate-800">Solusi Cepat & Profesional untuk Semua Kebutuhan Digital Anda! 🚀</p>
+                    <p>Bingung cari tempat edit dokumen yang rapi atau cetak foto dengan kualitas jempolan? One Creative hadir sebagai mitra terpercaya untuk mentransformasi file Anda menjadi karya fisik yang sempurna.</p>
+                    <p>Dengan konsep toko yang modern dan layanan ramah bintang lima, kami memastikan setiap detail kebutuhan Anda tertangani dengan presisi.</p>
+                `,
+                features: [
+                    { title: 'Edit Dokumen & File', desc: 'Kirim file berantakan, terima hasil yang rapi dan siap cetak.' },
+                    { title: 'Edit Foto Profesional', desc: 'Penyesuaian warna, retouching, hingga cetak kualitas tinggi.' },
+                    { title: 'Teknologi Cetak Terkini', desc: 'Menggunakan mesin cetak laser dan inkjet terbaru untuk hasil tajam.' },
+                    { title: 'Konsultasi Langsung', desc: 'Tim kreatif kami siap membantu Anda di depan layar secara interaktif.' }
+                ],
+                waLink: 'https://wa.me/p/26500848312912576/19374631075898'
+            },
+            'billing-tv': {
+                name: 'Tagihan Internet & TV Kabel',
+                badge: 'Entertainment',
+                priceOld: 'Rp 350.000,00',
+                priceNew: 'Rp 250.000,00',
+                image: 'img/product-billing.png',
+                description: `
+                    <p class="font-bold text-slate-800">Bebas Nonton dan Internetan Seharian 📲</p>
+                    <p>Bayar tagihan Internet & TV Kabel (MNC Vision, Oke Vision, My Republic, First Media, dll) telah tersedia di One Creative!</p>
+                    <p>Tanpa ribet dan ga perlu keluar Rumah. Pastinya bikin aktivitas streaming, dan browsing kamu jadi lebih lancar 🚀</p>
+                `,
+                features: [
+                    { title: 'Multi-Provider', desc: 'Mendukung MNC Vision, Indihome, MyRepublic, First Media, dan banyak lagi.' },
+                    { title: 'Instan Issued', desc: 'Pembayaran langsung terverifikasi di sistem provider.' },
+                    { title: 'Anti Denda', desc: 'Layanan pengingat dan proses cepat untuk menghindari keterlambatan.' }
+                ],
+                waLink: 'https://wa.me/p/27310684491857690/19374631075898'
+            },
+            'digital-solution': {
+                name: 'One Stop Digital Solution',
+                badge: 'Lifestyle',
+                priceOld: 'Rp 10.000,00',
+                priceNew: 'Rp 5.000,00',
+                image: 'img/product-services.png',
+                description: `
+                    <p class="font-bold text-slate-800">"One Creative: One Stop Digital Solution untuk Anda!"</p>
+                    <p>Selamat datang di One Creative, Toko serba ada yang siap memenuhi segala kebutuhan digital Anda! Pesan tiket pesawat, kereta, kapal laut, hingga reservasi hotel dan paket umroh.</p>
+                    <p>Kami juga melayani topup e-wallet, pembayaran tagihan, hingga area gaming yang nyaman dengan WiFi kencang.</p>
+                `,
+                features: [
+                    { title: 'Tiket & Travel', desc: 'Pesawat, Kereta, Kapal Laut, Hotel, hingga Paket Umroh.' },
+                    { title: 'Financial Services', desc: 'Transfer uang antar bank dan top-up semua saldo e-wallet.' },
+                    { title: 'Digital Hub', desc: 'WiFi kencang, area gaming, dan layanan cetak dokumen lengkap.' }
+                ],
+                waLink: 'https://wa.me/p/8097272546974236/19374631075898'
+            },
+            'bayar-tagihan': {
+                name: 'Bayar Tagihan Bulanan',
+                badge: 'Utilities',
+                priceOld: 'Rp 100.000,00',
+                priceNew: 'Rp 20.000,00',
+                image: 'img/product-pln.png',
+                description: `
+                    <p class="font-bold text-slate-800">Hidup Tenang, Tagihan Lancar! 😌✨</p>
+                    <p>Jangan tunggu denda! Bayar tagihan PLN, PDAM, Gas dan tagihan lainnya, lebih hemat dan praktis di One Creative. Nggak ribet, anti antre, langsung issued!</p>
+                `,
+                features: [
+                    { title: 'PLN & Token', desc: 'Listrik pascabayar dan pembelian token prabayar instan.' },
+                    { title: 'PDAM 185+ Daerah', desc: 'Mendukung pembayaran air bersih di hampir seluruh wilayah Indonesia.' },
+                    { title: 'Gas PGN & BPJS', desc: 'Bayar tagihan gas rumah tangga dan iuran kesehatan dengan mudah.' }
+                ],
+                waLink: 'https://wa.me/p/26449722454711370/19374631075898'
+            },
+            'topup-games': {
+                name: 'Top Up Games',
+                badge: 'Gaming',
+                priceOld: 'Rp 10.000,00',
+                priceNew: 'Rp 5.000,00',
+                image: 'img/product-games.png',
+                description: `
+                    <p class="font-bold text-slate-800">Mau Top Up Games? di Sistem One Creative AJA! 🎮</p>
+                    <p>Ingin top up games anti ribet? Kamu bisa Top up dan beli Voucher game favoritmu di One Creative dengan harga yang tentunya lebih Hemat!</p>
+                    <p>Dari Free Fire hingga Mobile Legend, Steam Wallet sampai UniPin Gift Card, semua tersedia!</p>
+                `,
+                features: [
+                    { title: 'Semua Judul Populer', desc: 'MLBB, Free Fire, PUBG Mobile, Genshin Impact, dll.' },
+                    { title: 'Voucher Digital', desc: 'Steam Wallet, Google Play, UniPin, Razer Gold.' },
+                    { title: 'Harga Kompetitif', desc: 'Dapatkan harga reseller dengan proses super cepat.' }
+                ],
+                waLink: 'https://wa.me/p/35523170423940533/19374631075898'
+            },
+            'cetak-undangan': {
+                name: 'Cetak Undangan Erba',
+                badge: 'Creative Print',
+                priceOld: 'Rp 2.500,00',
+                priceNew: 'Rp 2.000,00',
+                image: 'img/product-undangan.png',
+                description: `
+                    <p class="font-bold text-slate-800">Kesan Pertama Pernikahan yang Berkesan ✨</p>
+                    <p>One Creative menghadirkan layanan Cetak Undangan dengan desain yang unik dan berani. Cocok untuk Pernikahan, Khitanan, atau Ulang Tahun dengan hasil cetak berkualitas tinggi.</p>
+                `,
+                features: [
+                    { title: 'Katalog Lengkap', desc: 'Pilih dari ratusan desain eksklusif Erba 2024.' },
+                    { title: 'Desain Custom', desc: 'Tim kami siap membantu penataan data dan revisi desain.' },
+                    { title: 'Minimal Order Rendah', desc: 'Mulai dari 100 pcs saja dengan proses pengerjaan cepat.' }
+                ],
+                waLink: 'https://wa.me/p/26536829565981922/19374631075898'
+            },
+            'tiket-last-minute': {
+                name: 'Tiket Pesawat Last Minute',
+                badge: 'Exclusive Feature',
+                priceOld: 'Rp 924.820,00',
+                priceNew: 'Rp 910.820,00',
+                image: 'img/product-last-minute.png',
+                description: `
+                    <p class="font-bold text-slate-800">Boking Tiket mepet? Tenang, ga usah panik! ✈️</p>
+                    <p>Dengan fitur Booking Last Minute One Creative, kamu bisa pesan tiket pesawat walau 1 Jam lagi terbang. Fitur ini tidak ada di situs online lain!</p>
+                `,
+                features: [
+                    { title: 'Hingga 60 Menit Sebelum', desc: 'Pemesanan tetap terbuka saat situs lain sudah tutup.' },
+                    { title: 'Khusus Lion Group', desc: 'Berlaku untuk Lion Air, Wings Air, dan Batik Air.' },
+                    { title: 'Langsung Issued', desc: 'Tanpa tunggu lama, tiket langsung terbit di tangan.' }
+                ],
+                waLink: 'https://wa.me/p/26542567745377982/19374631075898'
+            },
+            'tiket-pesawat': {
+                name: 'Tiket Pesawat Int & Dom',
+                badge: 'Travel',
+                priceOld: 'Rp 1.667.800,00',
+                priceNew: 'Rp 924.820,00',
+                image: 'img/product-flights.png',
+                description: `
+                    <p class="font-bold text-slate-800">Traveling ke Luar Negeri? Pakai fitur Internasional! 🌏</p>
+                    <p>Tersedia lebih dari 187 maskapai internasional. Bagi kamu yang ingin perjalanan lokal atau luar negeri, One Creative adalah solusinya.</p>
+                `,
+                features: [
+                    { title: '187+ Maskapai', desc: 'Pilihan lengkap maskapai domestik dan internasional.' },
+                    { title: 'Harga Transparan', desc: 'Tanpa biaya tersembunyi, harga jujur sejak awal.' },
+                    { title: 'Layanan 24/7', desc: 'Tim admin kami siap membantu proses check-in dan perubahan.' }
+                ],
+                waLink: 'https://wa.me/p/26375278675486477/19374631075898'
+            },
+            'pelni': {
+                name: 'Tiket Kapal PELNI',
+                badge: 'Sea Travel',
+                priceOld: 'Rp 197.500,00',
+                priceNew: 'Rp 143.800,00',
+                image: 'img/product-pelni.png',
+                description: `
+                    <p class="font-bold text-slate-800">Booking Tiket Kapal Pelni cuma klik-klik beres! 🚢</p>
+                    <p>Bingung mau pesan tiket PELNI dimana? Cek jadwal dan booking di One Creative gampang banget! Tinggal duduk manis, tiket sudah di tangan.</p>
+                `,
+                features: [
+                    { title: 'Update Jadwal Real-time', desc: 'Data keberangkatan kapal langsung dari sistem PELNI.' },
+                    { title: 'Booking Mudah', desc: 'Cukup kirim KTP, kami selesaikan proses bookingnya.' },
+                    { title: 'Support Rute Perintis', desc: 'Mendukung rute kapal besar hingga kapal perintis antar pulau.' }
+                ],
+                waLink: 'https://wa.me/p/34326297357018779/19374631075898'
+            },
+            'express': {
+                name: 'One Creative Express',
+                badge: 'Logistics',
+                priceOld: 'Rp 85.000,00',
+                priceNew: 'Rp 25.500,00',
+                image: 'img/product-express.png',
+                description: `
+                    <p class="font-bold text-slate-800">Kirim paket sekarang nggak ribet lagi 🚀</p>
+                    <p>Sekarang ga perlu repot-repot anter paket ke gerai ekspedisi. Cukup kami bantu proses order, pilih kurir dengan Pickup Service dan tunggu kurir menjemput.</p>
+                `,
+                features: [
+                    { title: 'Pickup Gratis', desc: 'Kurir datang ke lokasi Anda untuk mengambil paket.' },
+                    { title: 'Banyak Pilihan Ekspedisi', desc: 'JNE, J&T, SiCepat, Anteraja, Paxel, dll.' },
+                    { title: 'Layanan COD & Kargo', desc: 'Mendukung pengiriman reguler hingga kargo berat ke seluruh RI.' }
+                ],
+                waLink: 'https://wa.me/p/26993911080193329/19374631075898'
+            }
+        };
+
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const product = products[productId];
+
+        if (product) {
+            document.title = `${product.name} — One Creative`;
+            document.getElementById('product-name').innerText = product.name;
+            document.getElementById('product-badge').innerText = product.badge;
+            document.getElementById('product-price-old').innerText = product.priceOld;
+            document.getElementById('product-price-new').innerText = product.priceNew;
+            document.getElementById('product-image').src = product.image;
+            document.getElementById('product-description').innerHTML = product.description;
+            document.getElementById('whatsapp-link').href = product.waLink;
+
+            const featuresContainer = document.getElementById('product-features');
+            product.features.forEach(f => {
+                featuresContainer.innerHTML += `
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-[#4fbed4]/10 rounded-lg flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-[#4fbed4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">${f.title}</h3>
+                            <p class="text-slate-500">${f.desc}</p>
+                        </div>
+                    </div>
+                `;
+            });
+        } else {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
