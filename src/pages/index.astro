@@ -123,6 +123,100 @@ const products = [
         url: 'https://wa.me/p/26993911080193329/6285796792110'
     }
 ];
+
+const testimonials = [
+    {
+        name: 'Andi Resky',
+        initials: 'AR',
+        role: 'Local Guide',
+        text: 'Hasil cetakan dokumen dan fotonya sangat tajam, warna akurat. Pengerjaan juga sangat cepat, bisa ditunggu. Rekomendasi banget buat yang cari tempat print berkualitas di Bau-Bau.',
+        text_en: 'The document and photo print results are very sharp, colors are accurate. Work is also very fast, can be waited for. Highly recommended for those looking for quality print spots in Bau-Bau.'
+    },
+    {
+        name: 'Ihsan',
+        initials: 'I',
+        role: 'Pelanggan',
+        text: 'Satu tempat untuk semua kebutuhan. Main PS, mau print dokumen atau cetak undangan pun bisa di sini',
+        text_en: 'One place for all needs. Playing PS, printing documents or wedding invitations can all be done here'
+    },
+    {
+        name: 'Anwar',
+        initials: 'A',
+        role: 'Pelanggan',
+        text: 'Pelayanan bagus, tempat bersih dan nyamaan',
+        text_en: 'Good service, clean and comfortable place'
+    },
+    {
+        name: 'Xiao Vann',
+        initials: 'XV',
+        role: 'Pelanggan',
+        text: 'Pengalaman terbaik saat bermain game PlayStation',
+        text_en: 'Best experience while playing PlayStation games'
+    },
+    {
+        name: 'Harni Joongki',
+        initials: 'HJ',
+        role: 'Pelanggan',
+        text: 'Buat tugas anak mudah sekali, sangat membantu',
+        text_en: 'Making children\'s assignments is so easy, very helpful'
+    },
+    {
+        name: 'Sahia Sahia',
+        initials: 'SS',
+        role: 'Pelanggan',
+        text: 'Tugas anakku cepat selesai, Alhamdulillah',
+        text_en: 'My child\'s assignments were finished quickly, Alhamdulillah'
+    },
+    {
+        name: 'Yugi',
+        initials: 'Y',
+        role: 'Pelanggan',
+        text: 'Murah dan cepat gg',
+        text_en: 'Cheap and fast gg'
+    },
+    {
+        name: 'ceica ceisya cantika',
+        initials: 'CC',
+        role: 'Pelanggan',
+        text: 'Pelayanan pembelian tiket pelni dan pesawat sangat cepat, dan respon penjual sangat cepat😍',
+        text_en: 'Pelni and flight ticket purchase service is very fast, and the seller\'s response is very quick😍'
+    },
+    {
+        name: 'Haris',
+        initials: 'H',
+        role: 'Pelanggan',
+        text: 'Boleh di percaya, setiap order saya selesai tepat waktu',
+        text_en: 'Can be trusted, every order of mine is finished on time'
+    },
+    {
+        name: 'Uriel 2',
+        initials: 'U2',
+        role: 'Pelanggan',
+        text: 'bisa jadi opsi untuk pemesanan tiket secara online, tidak perlu lagi ke pelabuhan atau bandara untuk membeli tiket, karena bisa langsung cek dan pesan di toko ini',
+        text_en: 'Can be an option for online ticket booking, no need to go to the port or airport to buy tickets anymore, because you can check and order directly at this store'
+    },
+    {
+        name: 'Hadania Hasan',
+        initials: 'HH',
+        role: 'Pelanggan',
+        text: 'Beli pulsa dan token lebih mudah dan fast respon',
+        text_en: 'Buying credit and tokens is easier and fast response'
+    },
+    {
+        name: 'CROW Up',
+        initials: 'CU',
+        role: 'Pelanggan',
+        text: 'pelayanan sangat responsif dan tersedia banyak layanan jasa mulai dari pulsa, token listrik, bayar tagihan, top up dan lain sebagainya',
+        text_en: 'Service is very responsive and many services are available starting from credit, electricity tokens, bill payment, top up and so on'
+    },
+    {
+        name: 'Putri Flora',
+        initials: 'PF',
+        role: 'Pelanggan',
+        text: 'Sangat membantu dalam daftar online mahasiswa, keren banget',
+        text_en: 'Very helpful in student online registration, so cool'
+    }
+];
 ---
 
 <Layout title="One Creative — Percetakan, Tiket, & Solusi Digital Terlengkap di Bau-Bau">
@@ -222,24 +316,25 @@ const products = [
                 </div>
                 
                 <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory no-scrollbar" style="mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);">
-                    <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white p-10 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                        <div class="mb-8">
-                            <div class="flex gap-1 mb-6">
-                                {[1, 2, 3, 4, 5].map(() => (
-                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                ))}
+                    {testimonials.map((t) => (
+                        <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white p-10 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                            <div class="mb-8">
+                                <div class="flex gap-1 mb-6">
+                                    {[1, 2, 3, 4, 5].map(() => (
+                                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    ))}
+                                </div>
+                                <p class="text-slate-600 text-lg italic leading-relaxed lang-text" data-id={`"${t.text}"`} data-en={`"${t.text_en}"`}>"{t.text}"</p>
                             </div>
-                            <p class="text-slate-600 text-lg italic leading-relaxed lang-text" data-id='"Hasil cetakan dokumen dan fotonya sangat tajam, warna akurat. Pengerjaan juga sangat cepat, bisa ditunggu. Rekomendasi banget buat yang cari tempat print berkualitas di Bau-Bau."' data-en='"The document and photo print results are very sharp, colors are accurate. Work is also very fast, can be waited for. Highly recommended for those looking for quality print spots in Bau-Bau."'>"Hasil cetakan dokumen dan fotonya sangat tajam, warna akurat. Pengerjaan juga sangat cepat, bisa ditunggu. Rekomendasi banget buat yang cari tempat print berkualitas di Bau-Bau."</p>
-                        </div>
-                        <div class="flex items-center gap-4 pt-6 border-t border-slate-50">
-                            <div class="w-12 h-12 bg-[#4fbed4]/20 rounded-full flex items-center justify-center font-bold text-[#4fbed4]">AR</div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Andi Resky</h4>
-                                <p class="text-slate-400 text-xs uppercase tracking-widest">Local Guide</p>
+                            <div class="flex items-center gap-4 pt-6 border-t border-slate-50">
+                                <div class="w-12 h-12 bg-[#4fbed4]/20 rounded-full flex items-center justify-center font-bold text-[#4fbed4]">{t.initials}</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">{t.name}</h4>
+                                    <p class="text-slate-400 text-xs uppercase tracking-widest">{t.role}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Other testimonials shortened for brevity in write_file, but logic remains same -->
+                    ))}
                 </div>
 
                 <div class="mt-8 text-center">
@@ -289,14 +384,54 @@ const products = [
         </section>
     </main>
 
-    <footer class="bg-black text-white pt-32 pb-16 px-6">
-        <div class="container mx-auto max-w-6xl text-center">
-            <h2 class="text-[40px] md:text-[56px] font-semibold mb-10 lang-text" data-id="Punya Pertanyaan?" data-en="Have Questions?">Punya Pertanyaan?</h2>
-            <div class="flex justify-center gap-10 mb-12">
-                <a href="https://instagram.com/onecreative.id" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">Instagram</a>
-                <a href="https://www.facebook.com/onecreativeaio" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">Facebook</a>
+    <footer class="bg-[#0a0a0a] text-white pt-32 pb-16 px-6 border-t border-white/5">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-20">
+                <h2 class="text-[40px] md:text-[56px] font-semibold mb-10 lang-text" data-id="Punya Pertanyaan?" data-en="Have Questions?">Punya Pertanyaan?</h2>
+                <a href="https://wa.me/6285796792110" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center gap-3 px-10 py-5 text-lg shadow-2xl shadow-[#4fbed4]/20 hover:scale-105 transition-transform">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.634 1.437h.005c6.558 0 11.897-5.335 11.9-11.894a11.83 11.83 0 00-3.483-8.413z"/></svg>
+                    <span class="lang-text" data-id="Chat via WhatsApp" data-en="Chat via WhatsApp">Chat via WhatsApp</span>
+                </a>
             </div>
-            <p class="text-slate-400 text-sm">&copy; 2026 One Creative ID. <span class="lang-text" data-id="Solusi Digital Terpercaya di Bau-Bau." data-en="Trusted Digital Solution in Bau-Bau.">Solusi Digital Terpercaya di Bau-Bau.</span></p>
+
+            <div class="grid md:grid-cols-3 gap-12 pt-20 border-t border-white/10 text-left">
+                <div>
+                    <img src="/img/logo.png" alt="Logo One Creative Bau-Bau" class="h-10 w-auto mb-8 brightness-0 invert">
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6 lang-text" 
+                       data-id="PT. ONE CREATIVE AIO: Partner digital terpercaya untuk segala kebutuhan percetakan dan layanan digital Anda di Kota Bau-Bau."
+                       data-en="PT. ONE CREATIVE AIO: Trusted digital partner for all your printing and digital service needs in Bau-Bau City.">
+                        PT. ONE CREATIVE AIO: Partner digital terpercaya untuk segala kebutuhan percetakan dan layanan digital Anda di Kota Bau-Bau.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-8 uppercase tracking-widest text-xs text-white/50 lang-text" data-id="Lokasi Workshop" data-en="Workshop Location">Lokasi Workshop</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Jl. Gajah Mada, Lipu, Kec. Betoambari,<br>
+                        Kota Bau-Bau, Sulawesi Tenggara 93721
+                    </p>
+                    <a href="https://maps.app.goo.gl/M4MJnxSZbpL4fHmo6" target="_blank" rel="noopener noreferrer" class="text-[#4fbed4] text-sm font-semibold hover:underline flex items-center gap-2">
+                        Google Maps <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </a>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-8 uppercase tracking-widest text-xs text-white/50 lang-text" data-id="Ikuti Kami" data-en="Follow Us">Ikuti Kami</h4>
+                    <div class="flex flex-col gap-4">
+                        <a href="https://instagram.com/onecreative.id" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-3">
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/onecreativeaio" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors flex items-center gap-3">
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs">&copy; 2026 PT. ONE CREATIVE AIO. <span class="lang-text" data-id="Hak Cipta Dilindungi." data-en="All Rights Reserved.">Hak Cipta Dilindungi.</span></p>
+                <div class="flex gap-8 text-xs text-slate-500">
+                    <span class="lang-text" data-id="Solusi Digital Bau-Bau" data-en="Bau-Bau Digital Solution">Solusi Digital Bau-Bau</span>
+                </div>
+            </div>
         </div>
     </footer>
 </Layout>
