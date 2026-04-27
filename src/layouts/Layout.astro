@@ -148,6 +148,46 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 		</script>
 	</head>
 	<body class="selection:bg-[#4fbed4]/20">
+		<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+			<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+				<a href="/" class="flex items-center gap-4">
+					<img src="/img/logo.png" alt="Logo One Creative Bau-Bau" class="h-8 w-auto">
+				</a>
+				<div class="hidden md:flex items-center gap-8">
+					<a href="#produk" class="text-sm font-bold text-slate-600 hover:text-[#4fbed4] transition-colors lang-text" data-id="Produk" data-en="Products">Produk</a>
+					<a href="#tentang" class="text-sm font-bold text-slate-600 hover:text-[#4fbed4] transition-colors lang-text" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a>
+					<button id="langToggle" class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg text-sm font-bold hover:bg-[#4fbed4] hover:text-white transition-all">
+						<span id="langLabel">ID</span>
+					</button>
+				</div>
+			</div>
+		</nav>
+
 		<slot />
+
+		<script is:inline>
+			let currentLang = localStorage.getItem('lang') || 'id';
+
+			function updateLanguageUI() {
+				const label = document.getElementById('langLabel');
+				if (label) label.innerText = currentLang.toUpperCase();
+				
+				// Update all elements with [data-id][data-en]
+				document.querySelectorAll('[data-id][data-en]').forEach(el => {
+					el.innerText = currentLang === 'en' ? el.dataset.en : el.dataset.id;
+				});
+
+        // Specific handling for complex blocks if needed
+			}
+
+			document.getElementById('langToggle')?.addEventListener('click', () => {
+				currentLang = currentLang === 'id' ? 'en' : 'id';
+				localStorage.setItem('lang', currentLang);
+				updateLanguageUI();
+        // Optional: window.location.reload(); if Astro logic needs re-run
+			});
+
+			updateLanguageUI();
+		</script>
 	</body>
 </html>
