@@ -8,7 +8,8 @@ const products = [
         desc: 'Edit dokumen, pengetikan, & cetak foto kualitas tinggi dengan teknologi laser terbaru.',
         price: 'Mulai Rp 1.000',
         img: '/img/product-print.png',
-        btnText: 'Detail Percetakan'
+        btnText: 'Detail Percetakan',
+        url: 'https://wa.me/p/26500848312912576/6285796792110'
     },
     {
         id: 'billing-tv',
@@ -16,7 +17,8 @@ const products = [
         desc: 'Bayar Indihome, MNC Vision, My Republic & First Media praktis di satu tempat.',
         price: 'Layanan PPOB',
         img: '/img/product-billing.png',
-        btnText: 'Bayar Sekarang'
+        btnText: 'Bayar Sekarang',
+        url: 'https://wa.me/p/27310684491857690/6285796792110'
     },
     {
         id: 'digital-solution',
@@ -24,7 +26,8 @@ const products = [
         desc: 'Pusat reservasi tiket, hotel, paket umroh, & topup e-wallet terlengkap di Bau-Bau.',
         price: 'Layanan Lengkap',
         img: '/img/product-services.png',
-        btnText: 'Lihat Layanan'
+        btnText: 'Lihat Layanan',
+        url: 'https://wa.me/p/8097272546974236/6285796792110'
     },
     {
         id: 'bayar-tagihan',
@@ -32,7 +35,8 @@ const products = [
         desc: 'Bayar PLN, PDAM, & Gas PGN 185+ daerah. Proses cepat, bukti bayar sah.',
         price: 'Anti Denda',
         img: '/img/product-pln.png',
-        btnText: 'Bayar Tagihan'
+        btnText: 'Bayar Tagihan',
+        url: 'https://wa.me/p/26449722454711370/6285796792110'
     },
     {
         id: 'topup-games',
@@ -40,7 +44,8 @@ const products = [
         desc: 'Isi Diamond MLBB, FF, PUBG & Voucher Steam Wallet harga termurah di Bau-Bau.',
         price: 'Instan 24 Jam',
         img: '/img/product-games.png',
-        btnText: 'Top Up Sekarang'
+        btnText: 'Top Up Sekarang',
+        url: 'https://wa.me/p/35523170423940533/6285796792110'
     },
     {
         id: 'cetak-undangan',
@@ -48,7 +53,8 @@ const products = [
         desc: 'Pilihan katalog undangan pernikahan & khitanan terbaru. Desain unik & berkesan.',
         price: 'Katalog 2024',
         img: '/img/product-undangan.png',
-        btnText: 'Lihat Katalog'
+        btnText: 'Lihat Katalog',
+        url: 'https://wa.me/p/26536829565981922/6285796792110'
     },
     {
         id: 'tiket-last-minute',
@@ -56,7 +62,8 @@ const products = [
         desc: 'Pesan tiket pesawat 60 menit sebelum take-off. Layanan eksklusif Lion Group.',
         price: '60 Menit Ready',
         img: '/img/product-last-minute.png',
-        btnText: 'Pesan Tiket'
+        btnText: 'Pesan Tiket',
+        url: 'https://wa.me/p/26542567745377982/6285796792110'
     },
     {
         id: 'tiket-pesawat',
@@ -64,7 +71,8 @@ const products = [
         desc: 'Terbang ke rute lokal & internasional dengan pilihan maskapai terlengkap & murah.',
         price: '187+ Maskapai',
         img: '/img/product-flights.png',
-        btnText: 'Cek Rute'
+        btnText: 'Cek Rute',
+        url: 'https://wa.me/p/26375278675486477/6285796792110'
     },
     {
         id: 'pelni',
@@ -72,7 +80,8 @@ const products = [
         desc: 'Booking tiket kapal laut PELNI gampang & cepat. Cek jadwal rute Nusantara.',
         price: 'Agen Resmi',
         img: '/img/product-pelni.png',
-        btnText: 'Booking Kapal'
+        btnText: 'Booking Kapal',
+        url: 'https://wa.me/p/34326297357018779/6285796792110'
     },
     {
         id: 'express',
@@ -80,7 +89,8 @@ const products = [
         desc: 'Kirim paket ke seluruh Indonesia dengan pilihan beragam ekspedisi terpercaya.',
         price: 'Pickup Gratis',
         img: '/img/product-express.png',
-        btnText: 'Kirim Paket'
+        btnText: 'Kirim Paket',
+        url: 'https://wa.me/p/26993911080193329/6285796792110'
     }
 ];
 ---
@@ -171,7 +181,7 @@ const products = [
                             </div>
                             <h3 class="text-lg font-bold mb-2">{product.name}</h3>
                             <p class="text-slate-500 text-xs mb-6 line-clamp-2">{product.desc}</p>
-                            <a href={`/produk/${product.id}`} class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">{product.btnText}</a>
+                            <a href={product.url} target="_blank" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">{product.btnText}</a>
                         </article>
                     ))}
                 </div>
