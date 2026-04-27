@@ -175,12 +175,19 @@ const products = [
                     {products.map((product) => (
                         <article class="group card-wf bg-white p-4 hover:border-[#4fbed4] transition-all duration-300">
                             <div class="relative overflow-hidden rounded-xl mb-5 aspect-square border border-slate-100">
-                                <img src={product.img} alt={`${product.name} - Layanan Digital & Percetakan Terbaik di Kota Bau-Bau`} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <img 
+                                    src={product.img} 
+                                    alt={`${product.name} - Layanan Digital & Percetakan Terbaik di Kota Bau-Bau`} 
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    width="400"
+                                    height="400"
+                                    loading="lazy"
+                                />
                                 <div class="absolute top-3 left-3"><span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-sm">{product.price}</span></div>
                             </div>
                             <h3 class="text-lg font-bold mb-2">{product.name}</h3>
                             <p class="text-slate-500 text-xs mb-6 line-clamp-2">{product.desc}</p>
-                            <a href={product.url} target="_blank" class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">{product.btnText}</a>
+                            <a href={product.url} target="_blank" rel="noopener noreferrer" aria-label={`Pesan ${product.name} via WhatsApp`} class="block w-full py-3 bg-slate-50 text-center rounded-lg font-semibold text-sm hover:bg-[#4fbed4] hover:text-white transition-all">{product.btnText}</a>
                         </article>
                     ))}
                 </div>
