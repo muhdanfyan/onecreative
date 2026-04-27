@@ -95,6 +95,56 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 		  ]
 		}
 		</script>
+
+		<!-- JSON-LD Structured Data (FAQPage) -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "FAQPage",
+		  "mainEntity": [
+			{
+			  "@type": "Question",
+			  "name": "Dimana lokasi percetakan dan layanan digital One Creative di Bau-Bau?",
+			  "acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Kantor pusat One Creative terletak strategis di Jl. Gajah Mada, Lipu, Kec. Betoambari, Kota Bau-Bau, Sulawesi Tenggara 93721. Anda bisa datang langsung ke workshop kami untuk layanan cetak, tiket, dan top up."
+			  }
+			},
+			{
+			  "@type": "Question",
+			  "name": "Apakah One Creative melayani cetak undangan pernikahan yang bisa ditunggu?",
+			  "acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Tentu! Kami menyediakan layanan cetak undangan pernikahan (seperti katalog Erba) dan dokumen dengan teknologi laser terbaru yang memungkinkan proses pengerjaan cepat dengan hasil tajam."
+			  }
+			},
+			{
+			  "@type": "Question",
+			  "name": "Layanan pembayaran (PPOB) apa saja yang tersedia?",
+			  "acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Sebagai PPOB terlengkap di Bau-Bau, kami melayani pembayaran tagihan listrik PLN, air PDAM, BPJS, gas PGN, internet (Indihome, MyRepublic), TV kabel, hingga cicilan multifinance."
+			  }
+			},
+			{
+			  "@type": "Question",
+			  "name": "Apakah bisa top up game murah seperti MLBB dan FreeFire di sini?",
+			  "acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Sangat bisa. Kami menawarkan top up diamond MLBB, FreeFire, PUBG, dan Steam Wallet dengan harga yang sangat bersaing dan proses instan 24 jam untuk gamers di wilayah Bau-Bau."
+			  }
+			},
+			{
+			  "@type": "Question",
+			  "name": "Apakah One Creative agen resmi tiket pesawat dan PELNI?",
+			  "acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Ya, kami adalah agen resmi yang melayani pemesanan tiket pesawat (termasuk flight last-minute) untuk rute domestik dan internasional, serta reservasi resmi tiket kapal laut PELNI tanpa antre."
+			  }
+			}
+		  ]
+		}
+		</script>
 	</head>
 	<body class="selection:bg-[#4fbed4]/20">
 		<slot />
