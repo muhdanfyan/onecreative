@@ -6,7 +6,7 @@ interface Props {
 	description?: string;
 }
 
-const { title, description = "One Creative Bau-Bau: Solusi digital terlengkap! Percetakan, desain grafis, bayar tagihan (PPOB), tiket pesawat last minute, agen PELNI, top up game murah, & ekspedisi paket." } = Astro.props;
+const { title, description = "One Creative Bau-Bau: Jasa cetak undangan pernikahan, tiket pesawat murah, agen PELNI resmi, top up game termurah, dan ekspedisi kirim paket terbaik di Kota Bau-Bau." } = Astro.props;
 const siteUrl = "https://www.onecreative.id";
 const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
@@ -24,7 +24,7 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
-		<meta name="keywords" content="percetakan bau-bau, jasa desain grafis bau-bau, bayar tagihan listrik bau-bau, tiket pesawat last minute, top up mlbb murah bau-bau, cetak undangan bau-bau, agen pelni bau-bau, ekspedisi paket bau-bau, one creative bau-bau" />
+		<meta name="keywords" content="percetakan bau-bau, digital printing bau-bau, cetak undangan bau-bau, tiket pesawat murah bau-bau, agen pelni bau-bau, top up game murah bau-bau, jasa desain grafis bau-bau, ekspedisi paket bau-bau, one creative bau-bau" />
 		<meta name="author" content="One Creative ID" />
 		<meta name="robots" content="index, follow" />
 		<link rel="canonical" href={canonicalURL} />
