@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
 
 export async function getStaticPaths() {
     const products = {
@@ -15,7 +16,7 @@ export async function getStaticPaths() {
                 <p>Kami melayani cetak foto, pengetikan, hingga penataan dokumen profesional dengan hasil tajam dan berkualitas tinggi.</p>
             `,
             features: [
-                { title: 'Print & Edit Cepat', desc: 'Layanan print dokumen dan editing foto murah & profesional.' },
+                { title: 'Print & Edit Cepat', desc: 'Layanan print dokumen and editing foto murah & profesional.' },
                 { title: 'Cetak Foto Murah', desc: 'Retouching warna dan cetak foto hasil tajam di Bau-Bau.' },
                 { title: 'Mesin Laser Terbaru', desc: 'Teknologi cetak terkini untuk hasil presisi di setiap lembar.' }
             ],
@@ -191,7 +192,9 @@ export async function getStaticPaths() {
     }));
 }
 
+const { id } = Astro.params;
 const { product } = Astro.props;
+const currentUrl = `https://www.onecreative.id/produk/${id}`;
 ---
 
 <Layout 
@@ -244,21 +247,19 @@ const { product } = Astro.props;
                         <p class="text-center text-sm text-slate-400">Tersedia untuk area Bau-Bau & sekitarnya.</p>
                     </div>
 
+                    <ShareButtons url={currentUrl} title={product.name} />
+
                     <!-- Features Section -->
-                    <div class="mt-16 pt-16 border-t border-slate-100 grid gap-8">
-                        {product.features.map(feature => (
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 bg-[#4fbed4]/10 rounded-lg flex items-center justify-center shrink-0">
-                                    <svg class="w-5 h-5 text-[#4fbed4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                                    </svg>
+                    <div class="mt-16 pt-16 border-t border-slate-100">
+                        <h2 class="text-2xl font-bold mb-8">Keunggulan Layanan</h2>
+                        <div class="grid gap-6">
+                            {product.features.map(feature => (
+                                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-[#4fbed4]/20 transition-colors">
+                                    <h3 class="font-bold text-slate-900 mb-2">{feature.title}</h3>
+                                    <p class="text-sm text-slate-500 leading-relaxed">{feature.desc}</p>
                                 </div>
-                                <div>
-                                    <h3 class="font-bold text-lg mb-1">{feature.title}</h3>
-                                    <p class="text-slate-500">{feature.desc}</p>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </section>
             </article>
