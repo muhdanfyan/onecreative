@@ -1,0 +1,109 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+    {
+        title: 'Pusat Percetakan & Layanan Digital Murah di Bau-Bau Buton',
+        desc: 'Cari tempat print, cetak undangan, dan tiket pesawat murah di Bau-Bau? Simak katalog lengkap layanan One Creative di sini.',
+        url: '/blog/layanan-digital-percetakan-murah-bau-bau-buton',
+        date: '29 April 2026',
+        img: '/img/hero-bg.png'
+    },
+    {
+        title: 'Top Up Game Murah & Instan Bau-Bau Buton — MLBB, FF, PUBG',
+        desc: 'Tempat top up game termurah di Bau-Bau Buton. Isi Diamond MLBB, Free Fire, dan PUBG instan 24 jam.',
+        url: '/blog/top-up-game-murah-instan-bau-bau-buton',
+        date: '29 April 2026',
+        img: '/img/product-games.png'
+    },
+    {
+        title: 'Bayar Tagihan Listrik, PDAM, & BPJS Murah Bau-Bau',
+        desc: 'Layanan PPOB terlengkap di Bau-Bau. Bayar tagihan PLN, PDAM, BPJS, dan cicilan motor praktis dan murah.',
+        url: '/blog/bayar-tagihan-listrik-pdam-bpjs-murah-bau-bau',
+        date: '29 April 2026',
+        img: '/img/product-pln.png'
+    },
+    {
+        title: 'Layanan Ekspedisi & Kirim Paket Murah Bau-Bau Buton',
+        desc: 'Kirim paket dari Bau-Bau ke seluruh Indonesia dengan harga murah. Gratis pickup untuk wilayah Kota Bau-Bau.',
+        url: '/blog/layanan-ekspedisi-kirim-paket-murah-bau-bau-buton',
+        date: '29 April 2026',
+        img: '/img/product-express.png'
+    },
+    {
+        title: 'Cetak Foto Laser Kualitas Tinggi Bau-Bau — Tajam & Tahan Lama',
+        desc: 'Cetak foto kualitas laser terbaik di Bau-Bau. Hasil tajam, warna akurat, dan tahan lama untuk momen spesial Anda.',
+        url: '/blog/cetak-foto-laser-kualitas-tinggi-bau-bau',
+        date: '29 April 2026',
+        img: '/img/product-print.png'
+    },
+    {
+        title: 'Reservasi Hotel, Tiket Wisata & Umrah Murah Bau-Bau',
+        desc: 'Layanan reservasi hotel, tiket wisata, dan paket umrah terpercaya di Bau-Bau Buton. Dapatkan harga promo terbaik.',
+        url: '/blog/reservasi-hotel-tiket-wisata-umrah-murah-bau-bau',
+        date: '29 April 2026',
+        img: '/img/product-services.png'
+    },
+    {
+        title: 'Bayar Tagihan Internet & TV Kabel Murah Bau-Bau',
+        desc: 'Tempat bayar tagihan internet dan TV kabel termurah di Bau-Bau. Proses cepat untuk Indihome, MNC Vision, dll.',
+        url: '/blog/bayar-tagihan-internet-tv-kabel-murah-bau-bau',
+        date: '29 April 2026',
+        img: '/img/product-billing.png'
+    },
+    {
+        title: 'Jasa Pengetikan Dokumen & Skripsi Cepat Bau-Bau',
+        desc: 'Butuh jasa pengetikan dokumen atau skripsi cepat di Bau-Bau? Kami melayani jasa pengetikan profesional harga murah.',
+        url: '/blog/jasa-pengetikan-dokumen-skripsi-cepat-bau-bau',
+        date: '29 April 2026',
+        img: '/img/product-print.png'
+    },
+    {
+        title: 'Jasa Cetak Undangan Pernikahan & Editing Foto Murah Bau-Bau',
+        desc: 'Butuh editing foto cepat atau cetak undangan pernikahan dengan harga murah di Bau-Bau? One Creative solusinya!',
+        url: '/blog/cetak-undangan-pernikahan-editing-foto-murah-bau-bau',
+        date: '28 April 2026',
+        img: '/img/product-undangan.png'
+    },
+    {
+        title: 'Tiket Pesawat Murah Bau-Bau & Agen Resmi PELNI Buton',
+        desc: 'Cara mendapatkan tiket pesawat murah dan tiket kapal PELNI tanpa antre di Kota Bau-Bau. Pesan sekarang di One Creative.',
+        url: '/blog/tiket-pesawat-murah-bau-bau-buton-agen-pelni',
+        date: '27 April 2026',
+        img: '/img/product-flights.png'
+    }
+];
+---
+
+<Layout 
+    title="Blog One Creative — Info Percetakan & Tiket Murah Bau-Bau Buton"
+    description="Kumpulan artikel seputar jasa print, percetakan murah, tiket pesawat, dan layanan digital terbaik di wilayah Kota Bau-Bau dan Kabupaten Buton."
+>
+    <main class="pt-32 pb-24 bg-slate-50 min-h-screen">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <header class="text-center mb-16">
+                <h1 class="text-[40px] md:text-[56px] font-semibold mb-6">Blog One Creative</h1>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto">Informasi terbaru seputar dunia digital, percetakan, dan tips perjalanan murah di Bau-Bau Buton.</p>
+            </header>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {posts.map(post => (
+                    <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                        <img src={post.img} alt={post.title} class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-xs text-slate-400 mb-2 font-bold uppercase tracking-widest">{post.date}</p>
+                            <h2 class="text-xl font-bold mb-3 hover:text-[#4fbed4] transition-colors">
+                                <a href={post.url}>{post.title}</a>
+                            </h2>
+                            <p class="text-slate-500 text-sm mb-6 line-clamp-3">{post.desc}</p>
+                            <a href={post.url} class="text-[#4fbed4] font-bold text-sm flex items-center gap-2">
+                                Baca Selengkapnya 
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    </main>
+</Layout>
