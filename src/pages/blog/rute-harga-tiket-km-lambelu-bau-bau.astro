@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const shipName = "KM Lambelu";
+const destination = "Nunukan & Balikpapan";
+---
+
+<Layout 
+    title={`Jadwal & Harga Tiket ${shipName} Bau-Bau ke ${destination} Mei 2026`}
+    description={`Informasi lengkap rute, harga tiket, dan jadwal keberangkatan KM Lambelu dari Pelabuhan Murhum Bau-Bau. Agen Resmi Tiket PELNI One Creative.`}
+>
+    <main class="pt-32 pb-24 bg-white">
+        <article class="container mx-auto px-6 max-w-3xl prose prose-slate">
+            <nav class="flex mb-8 text-xs font-bold uppercase tracking-widest text-slate-400 no-underline" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-2 list-none p-0">
+                    <li><a href="/" class="hover:text-[#146ef5] transition-colors">Beranda</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li><a href="/blog" class="hover:text-[#146ef5] transition-colors">Blog</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li class="text-slate-900">KM Lambelu</li>
+                </ol>
+            </nav>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+                Rute & Harga Tiket <span class="text-[#146ef5]">{shipName}</span> dari Bau-Bau ke {destination}
+            </h1>
+
+            <p class="lead">KM Lambelu merupakan salah satu kapal favorit masyarakat Bau-Bau yang ingin bepergian ke arah Kalimantan (Balikpapan, Tarakan, Nunukan) maupun ke arah Sulawesi Selatan (Makassar).</p>
+
+            <img src="/img/product-pelni.png" alt="Kapal PELNI KM Lambelu di Pelabuhan Bau-Bau" class="rounded-3xl shadow-xl mb-12 w-full h-80 object-cover" />
+
+            <h2>Rute Utama KM Lambelu</h2>
+            <p>Kapal ini secara rutin singgah di Pelabuhan Murhum Bau-Bau dengan rute sebagai berikut:</p>
+            <ul>
+                <li>Bau-Bau → Makassar</li>
+                <li>Bau-Bau → Pare-Pare</li>
+                <li>Bau-Bau → Balikpapan</li>
+                <li>Bau-Bau → Tarakan</li>
+                <li>Bau-Bau → Nunukan</li>
+            </ul>
+
+            <div class="bg-blue-50 p-8 rounded-2xl border-l-4 border-blue-600 my-10">
+                <h3 class="mt-0 text-blue-900 font-bold">Harga Tiket KM Lambelu (Ekonomi)</h3>
+                <table class="w-full text-sm mt-4">
+                    <thead>
+                        <tr class="text-blue-700">
+                            <th class="text-left py-2">Tujuan</th>
+                            <th class="text-right py-2">Dewasa</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-blue-100">
+                        <tr><td class="py-2">Bau-Bau ke Makassar</td><td class="text-right font-bold">Rp 187.500</td></tr>
+                        <tr><td class="py-2">Bau-Bau ke Balikpapan</td><td class="text-right font-bold">Rp 450.000</td></tr>
+                        <tr><td class="py-2">Bau-Bau ke Nunukan</td><td class="text-right font-bold">Rp 560.000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Kenapa Pesan Tiket di One Creative?</h2>
+            <p>Sebagai agen resmi di Bau-Bau, kami memberikan kemudahan ekstra bagi Anda:</p>
+            <ol>
+                <li><strong>Cetak Tiket Instan:</strong> Cukup kirim data melalui WA, kami cetakkan e-tiketnya.</li>
+                <li><strong>Pengecekan Kuota:</strong> Kami bisa melihat sisa kursi secara real-time.</li>
+                <li><strong>Tanpa Antre:</strong> Anda tidak perlu berdesakan di kantor pusat PELNI.</li>
+            </ol>
+
+            <div class="mt-12 text-center">
+                <a href="/jadwal-kapal-pelni-bau-bau" class="inline-block bg-[#146ef5] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-all no-underline">
+                    Lihat Jadwal Lengkap Kapal Lainnya
+                </a>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="https://wa.me/6285796792110" class="inline-block bg-green-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-all no-underline">
+                    Pesan Tiket via WhatsApp
+                </a>
+            </div>
+        </article>
+    </main>
+</Layout>
