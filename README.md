@@ -1,43 +1,40 @@
-# Astro Starter Kit: Minimal
+# One Creative — Sahabat Setia Semua Kebutuhan Anda
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Website resmi **PT. ONE CREATIVE AIO**, pusat layanan digital dan percetakan terpadu di Kota Bau-Bau, Sulawesi Tenggara. Website ini dirancang dengan standar teknologi web modern dan optimasi SEO tingkat lanjut untuk mendominasi pasar lokal.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Teknologi Terapan (Modern Stack)
+Website ini dibangun menggunakan arsitektur **AI-Native & Performance-First**:
+- **Framework:** [Astro](https://astro.build/) (Static Site Generation) untuk kecepatan muat halaman yang instan (Zero JS by default).
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) dengan kustomisasi desain premium terinspirasi dari Webflow Design System.
+- **Deployment:** [Vercel](https://vercel.com/) dengan pipeline CI/CD otomatis dari GitHub.
+- **Dynamic Assets:** Integrasi `html2canvas` untuk fitur berbagi jadwal kapal via screenshot berkualitas tinggi (HD).
+- **Multi-language:** Sistem i18n (ID/EN) berbasis client-side storage untuk pengalaman pengguna global.
 
-## 🚀 Project Structure
+## 📈 Pemaksimalan SEO (100% Score Optimization)
+Website ini telah dioptimasi secara ekstrem untuk mencapai skor maksimal pada alat audit SEO profesional:
+- **Keyword Strategy:** Implementasi *Exact Match Keywords* pada Title, H1, Meta Tags, dan Image Alt untuk kata kunci utama: *Percetakan Bau-Bau*, *Tiket PELNI Bau-Bau*, dan *Top Up Game Bau-Bau*.
+- **Technical SEO:**
+  - Pembuatan **Sitemap.xml** fisik dan optimasi **Robots.txt**.
+  - Integrasi **Google Analytics** (Gtag.js) sebagai standar verifikasi otoritas.
+  - Implementasi **JSON-LD Schema Markup** (LocalBusiness, FAQPage, BreadcrumbList) untuk mendapatkan Rich Snippets di hasil pencarian Google.
+- **Local SEO:** Metadata koordinat geografis (Geo-tagging) khusus wilayah Bau-Bau dan Buton.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🧠 Strategi Otoritas Topikal (Topical Authority)
+Bukan sekadar website profil, kami menerapkan strategi **Silo Content** untuk membangun kepercayaan algoritma Google:
+- **PELNI Silo:** Kumpulan artikel mendalam mengenai rute KM Lambelu, syarat perjalanan terbaru, dan panduan e-tiket.
+- **Percetakan Silo:** Edukasi konsumen mengenai katalog undangan Erba dan panduan cetak pas foto kilat.
+- **Interlinking:** Struktur tautan internal yang kuat untuk mendistribusikan otoritas halaman (Link Juice) ke seluruh domain.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🤖 AI-Powered Optimization (Tools AI)
+Proses pengembangan website ini memanfaatkan teknologi AI (Artificial Intelligence) untuk efisiensi dan akurasi:
+- **AI Coding Assistant:** Penulisan komponen Astro dan logika JavaScript yang bersih dan efisien.
+- **AI SEO Auditor:** Diagnosis otomatis terhadap struktur konten dan kepadatan kata kunci.
+- **AI Content Strategist:** Pemetaan topik (Topical Mapping) untuk memastikan semua kebutuhan informasi pelanggan di Bau-Bau terpenuhi secara logis.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠 Cara Pengembangan
+1. Install dependensi: `npm install`
+2. Jalankan mode dev: `npm run dev`
+3. Build produksi: `npm run build`
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+*© 2026 PT. ONE CREATIVE AIO. Dikembangkan dengan standar teknologi web masa depan.*
