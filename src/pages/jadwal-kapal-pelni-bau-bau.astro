@@ -15,16 +15,16 @@ const schedule = [
     title="Jadwal Kapal PELNI Bau-Bau Mei 2026 Terlengkap & Terbaru — One Creative"
     description="Update Jadwal Kapal PELNI dari Pelabuhan Murhum Bau-Bau Mei 2026. Cek jadwal KM Tidar, Labobar, Dobonsolo, Jetliner. Pesan tiket resmi di One Creative Bau-Bau."
 >
-    <!-- Head injection for html2canvas -->
     <Fragment slot="head">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" is:inline></script>
+        <!-- Load html2canvas correctly with defer -->
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
     </Fragment>
 
     <main class="pt-32 pb-24 bg-[#f8fafc] min-h-screen relative overflow-hidden">
         
         <!-- Watermark Logo Overlay -->
         <div class="fixed inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.03]">
-            <img src="/img/logo.png" alt="Watermark One Creative" class="w-[500px] grayscale">
+            <img src="/img/logo.png" alt="" class="w-[500px] grayscale">
         </div>
 
         <div class="container mx-auto px-6 max-w-4xl relative z-10">
@@ -38,10 +38,10 @@ const schedule = [
             </nav>
 
             <!-- Content Area to be screenshotted -->
-            <div id="capture-area" class="bg-white p-2 rounded-[32px] shadow-stack mb-12 border border-slate-100">
+            <div id="capture-area" class="bg-white p-1 rounded-[32px] shadow-stack mb-12 border border-slate-100">
                 <div class="bg-white p-8 md:p-12 rounded-[28px] border border-slate-50 relative overflow-hidden">
                     
-                    <!-- Inner Branding for Screenshot -->
+                    <!-- Inner Branding -->
                     <div class="flex justify-between items-start mb-12">
                         <div>
                             <div class="inline-block bg-[#146ef5]/10 text-[#146ef5] px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.1em] mb-4">
@@ -51,7 +51,7 @@ const schedule = [
                                 Jadwal Kapal PELNI <br/><span class="text-[#146ef5]">Bau-Bau Mei 2026</span>
                             </h1>
                         </div>
-                        <img src="/img/logo.png" alt="One Creative Logo" class="h-10 w-auto opacity-80">
+                        <img src="/img/logo.png" alt="One Creative" class="h-10 w-auto opacity-80" cross-origin="anonymous">
                     </div>
 
                     <!-- Schedule Table -->
@@ -82,7 +82,7 @@ const schedule = [
                     <!-- CTA Footer in Screenshot -->
                     <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-slate-100">
                         <div class="text-center md:text-left">
-                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 text-center md:text-left">Agen Resmi One Creative</p>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Agen Resmi One Creative</p>
                             <p class="text-sm font-semibold text-slate-900">WhatsApp: +62 857-9679-2110</p>
                         </div>
                         <div class="bg-[#146ef5] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-[#146ef5]/20">
@@ -92,10 +92,10 @@ const schedule = [
                 </div>
             </div>
 
-            <!-- Action Buttons (Not included in screenshot) -->
+            <!-- Action Buttons -->
             <div class="flex flex-wrap gap-4 justify-center">
                 <button id="btn-screenshot" class="bg-[#080808] text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-3 shadow-xl">
-                    <span class="text-2xl">📸</span> Simpan & Share Jadwal
+                    <span id="btn-icon">📸</span> <span id="btn-text">Simpan & Share Jadwal</span>
                 </button>
                 <a href="/produk/pelni" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-all">
                     Lihat Detail Produk
@@ -104,50 +104,61 @@ const schedule = [
 
             <!-- Extra SEO Content -->
             <div class="mt-24 grid md:grid-cols-2 gap-12 items-start">
-                <div class="prose prose-slate max-w-none">
+                <div class="prose prose-slate max-none">
                     <h2 class="text-2xl font-bold text-[#080808] mb-6">Tentang Jadwal PELNI Bau-Bau</h2>
                     <p class="text-slate-600 leading-relaxed">Dapatkan informasi paling akurat untuk keberangkatan kapal PELNI dari pelabuhan Murhum Bau-Bau. Kami mengupdate jadwal ini secara berkala untuk memastikan rencana perjalanan Anda berjalan lancar.</p>
                 </div>
-                <div class="bg-[#146ef5]/5 p-8 rounded-[24px] border border-[#146ef5]/10">
-                    <h3 class="font-bold text-slate-900 mb-4 text-xl text-center md:text-left">Butuh Konsultasi Rute?</h3>
-                    <p class="text-slate-500 text-sm mb-6 leading-relaxed text-center md:text-left">Admin kami siap membantu mengecek ketersediaan kursi dan rute terbaik untuk perjalanan Anda dari Bau-Bau.</p>
-                    <a href="https://wa.me/6285796792110" class="block w-full py-4 bg-white border border-[#146ef5] text-[#146ef5] text-center rounded-xl font-bold hover:bg-[#146ef5] hover:text-white transition-all">Chat Admin via WhatsApp</a>
+                <div class="bg-[#146ef5]/5 p-8 rounded-[24px] border border-[#146ef5]/10 text-center md:text-left">
+                    <h3 class="font-bold text-slate-900 mb-4 text-xl">Butuh Konsultasi Rute?</h3>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Admin kami siap membantu mengecek ketersediaan kursi dan rute terbaik untuk perjalanan Anda dari Bau-Bau.</p>
+                    <a href="https://wa.me/6285796792110?text=Halo%20One%20Creative,%20saya%20ingin%20cek%20jadwal%20PELNI" class="block w-full py-4 bg-white border border-[#146ef5] text-[#146ef5] rounded-xl font-bold hover:bg-[#146ef5] hover:text-white transition-all">Chat Admin via WhatsApp</a>
                 </div>
             </div>
         </div>
     </main>
 
     <script is:inline>
-        document.getElementById('btn-screenshot')?.addEventListener('click', function() {
-            const btn = this;
-            const originalText = btn.innerHTML;
-            btn.disabled = true;
-            btn.innerHTML = '<span>⏳</span> Memproses...';
+        window.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('btn-screenshot');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
 
-            const captureArea = document.getElementById('capture-area');
-            
-            html2canvas(captureArea, {
-                scale: 2, // High quality
-                useCORS: true,
-                backgroundColor: '#f8fafc',
-                logging: false,
-            }).then(canvas => {
-                const image = canvas.toDataURL("image/png");
-                const link = document.createElement('a');
-                link.download = `Jadwal-PELNI-Bau-Bau-One-Creative.png`;
-                link.href = image;
-                link.click();
-                
-                btn.disabled = false;
-                btn.innerHTML = originalText;
+            btn?.addEventListener('click', async function() {
+                if (typeof html2canvas === 'undefined') {
+                    alert('Sistem sedang memuat library, silakan tunggu 2 detik dan coba lagi.');
+                    return;
+                }
 
-                // Simple alert for mobile users
-                alert('Gambar berhasil diunduh! Silakan share ke WhatsApp atau Instagram.');
-            }).catch(err => {
-                console.error('Screenshot failed:', err);
-                alert('Gagal mengambil screenshot. Silakan coba lagi.');
-                btn.disabled = false;
-                btn.innerHTML = originalText;
+                btn.disabled = true;
+                btnIcon.innerText = '⏳';
+                btnText.innerText = 'Memproses...';
+
+                try {
+                    const captureArea = document.getElementById('capture-area');
+                    const canvas = await html2canvas(captureArea, {
+                        scale: 2,
+                        useCORS: true,
+                        allowTaint: true,
+                        backgroundColor: '#ffffff',
+                    });
+                    
+                    const image = canvas.toDataURL("image/png");
+                    const link = document.createElement('a');
+                    link.download = `Jadwal-PELNI-Bau-Bau-One-Creative.png`;
+                    link.href = image;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
+                    alert('Jadwal berhasil diunduh! Silakan cek folder Download Anda.');
+                } catch (err) {
+                    console.error('Screenshot error:', err);
+                    alert('Gagal mengambil gambar. Pastikan koneksi internet stabil.');
+                } finally {
+                    btn.disabled = false;
+                    btnIcon.innerText = '📸';
+                    btnText.innerText = 'Simpan & Share Jadwal';
+                }
             });
         });
     </script>
