@@ -4,12 +4,18 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	ogImage?: string;
 }
 
-const { title, description = "One Creative Bau-Bau: Jasa Print, Percetakan, Tiket Pelni, Tiket Pesawat Murah, Expedisi, dan Editing Foto terbaik di Bau-Bau & Buton. Solusi digital terlengkap dan termurah." } = Astro.props;
+const { 
+    title = "Percetakan Bau-Bau - Tiket Murah & Layanan Digital One Creative", 
+    description = "Percetakan Bau-Bau terbaik dan terlengkap. One Creative melayani jasa cetak undangan, tiket pesawat, agen PELNI, dan top up game murah di Kota Bau-Bau.",
+    ogImage = "/img/hero-bg.png"
+} = Astro.props;
+
 const siteUrl = "https://www.onecreative.id";
 const canonicalURL = new URL(Astro.url.pathname, siteUrl);
-const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
+const ogImageURL = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).toString();
 ---
 
 <!doctype html>
@@ -22,7 +28,7 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 		
 		<!-- Google Analytics Placeholder -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-		<script>
+		<script is:inline>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
@@ -30,13 +36,19 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 		</script>
 
 		<!-- Primary Meta Tags -->
-		<title>Percetakan Bau-Bau - Tiket Murah & Layanan Digital One Creative</title>
-		<meta name="title" content="Percetakan Bau-Bau - Tiket Murah & Layanan Digital One Creative" />
-		<meta name="description" content="Percetakan Bau-Bau terbaik dan terlengkap. One Creative melayani jasa cetak undangan, tiket pesawat, agen PELNI, dan top up game murah di Kota Bau-Bau." />
-		<meta name="keywords" content="Percetakan Bau-Bau, Cetak Undangan Bau-Bau, Tiket Pesawat Murah Bau-Bau, Agen Pelni Bau-Bau, Top Up Game Bau-Bau, Expedisi Bau-Bau, One Creative Bau-Bau" />
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="Percetakan Bau-Bau, Cetak Undangan Bau-Bau, Tiket Pesawat Murah Bau-Bau, Agen Pelni Bau-Bau, Top Up Game Bau-Bau, Expedisi Bau-Bau, One Creative Bau-Bau, print bau-bau, percetakan buton, tiket murah buton" />
 		<meta name="author" content="One Creative ID" />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Geo Tags (New Tech) -->
+		<meta name="geo.region" content="ID-SG" />
+		<meta name="geo.placename" content="Bau-Bau" />
+		<meta name="geo.position" content="-5.475193;122.588271" />
+		<meta name="ICBM" content="-5.475193, 122.588271" />
 
 		<!-- Open Graph / Facebook (Rich Link Preview) -->
 		<meta property="og:type" content="website" />
@@ -46,7 +58,7 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 		<meta property="og:image" content={ogImageURL} />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
-		<meta property="og:site_name" content="One Creative Bau-Bau" />
+		<meta property="og:site_name" content="One Creative Bau-Bau Buton" />
 
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
@@ -86,13 +98,7 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 		  "openingHoursSpecification": {
 			"@type": "OpeningHoursSpecification",
 			"dayOfWeek": [
-			  "Monday",
-			  "Tuesday",
-			  "Wednesday",
-			  "Thursday",
-			  "Friday",
-			  "Saturday",
-			  "Sunday"
+			  "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
 			],
 			"opens": "08:30",
 			"closes": "22:00"
@@ -154,6 +160,21 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 		  ]
 		}
 		</script>
+
+		<!-- Breadcrumb Schema (New Tech) -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "BreadcrumbList",
+		  "itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Beranda",
+			"item": "https://www.onecreative.id"
+		  }]
+		}
+		</script>
+		<slot name="head" />
 	</head>
 	<body class="selection:bg-[#4fbed4]/20">
 		<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
@@ -162,9 +183,9 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 					<img src="/img/logo.png" alt="Logo One Creative Bau-Bau" class="h-8 w-auto">
 				</a>
 				<div class="hidden md:flex items-center gap-8">
-					<a href="#produk" class="text-sm font-bold text-slate-600 hover:text-[#4fbed4] transition-colors lang-text" data-id="Produk" data-en="Products">Produk</a>
+					<a href="/#produk" class="text-sm font-bold text-slate-600 hover:text-[#4fbed4] transition-colors lang-text" data-id="Produk" data-en="Products">Produk</a>
 					<a href="/blog" class="text-sm font-bold text-slate-600 hover:text-[#4fbed4] transition-colors lang-text" data-id="Blog" data-en="Blog">Blog</a>
-					<a href="#tentang" class="text-sm font-bold text-slate-600 hover:text-[#4fbed4] transition-colors lang-text" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a>
+					<a href="/#tentang" class="text-sm font-bold text-slate-600 hover:text-[#4fbed4] transition-colors lang-text" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a>
 					<button id="langToggle" class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg text-sm font-bold hover:bg-[#4fbed4] hover:text-white transition-all">
 						<span id="langLabel">ID</span>
 					</button>
@@ -185,15 +206,12 @@ const ogImageURL = new URL('/img/hero-bg.png', siteUrl);
 				document.querySelectorAll('[data-id][data-en]').forEach(el => {
 					el.innerText = currentLang === 'en' ? el.dataset.en : el.dataset.id;
 				});
-
-        // Specific handling for complex blocks if needed
 			}
 
 			document.getElementById('langToggle')?.addEventListener('click', () => {
 				currentLang = currentLang === 'id' ? 'en' : 'id';
 				localStorage.setItem('lang', currentLang);
 				updateLanguageUI();
-        // Optional: window.location.reload(); if Astro logic needs re-run
 			});
 
 			updateLanguageUI();
