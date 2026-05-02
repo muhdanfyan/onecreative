@@ -202,6 +202,31 @@ const currentUrl = `https://www.onecreative.id/produk/${id}`;
     description={`Informasi detail mengenai ${product.name} di One Creative Bau-Bau. Dapatkan layanan terbaik dengan harga kompetitif.`}
     ogImage={product.image}
 >
+    <!-- Product Schema -->
+    <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": {JSON.stringify(product.name)},
+      "image": {JSON.stringify("https://www.onecreative.id" + product.image)},
+      "description": {JSON.stringify(product.badge + " di One Creative Bau-Bau Buton. Layanan murah dan terpercaya.")},
+      "brand": {
+        "@type": "Brand",
+        "name": "One Creative"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": {JSON.stringify(currentUrl)},
+        "priceCurrency": "IDR",
+        "price": {JSON.stringify(product.priceNew.replace(/[^0-9]/g, ""))},
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "LocalBusiness",
+          "name": "One Creative"
+        }
+      }
+    }
+    </script>
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">

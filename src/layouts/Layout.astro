@@ -30,10 +30,14 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteU
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
-		<meta name="keywords" content="print bau-bau, percetakan bau-bau, tiket pesawat murah bau-bau, editing foto bau-bau, percetakan buton, tiket murah buton, cetak undangan bau-bau, agen pelni bau-bau, top up game murah bau-bau, jasa desain grafis bau-bau, ekspedisi paket bau-bau, one creative bau-bau" />
+		<meta name="keywords" content="print bau-bau, percetakan bau-bau, tiket pesawat murah bau-bau, editing foto bau-bau, percetakan buton, tiket murah buton, cetak undangan bau-bau, agen pelni bau-bau, top up game murah bau-bau, jasa desain grafis bau-bau, ekspedisi paket bau-bau, one creative bau-bau, percetakan terdekat bau-bau, print dokumen 24 jam bau-bau, tiket pelni buton" />
 		<meta name="author" content="One Creative ID" />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 		<link rel="canonical" href={canonicalURL} />
+		<meta name="geo.region" content="ID-SG" />
+		<meta name="geo.placename" content="Bau-Bau" />
+		<meta name="geo.position" content="-5.475193;122.588271" />
+		<meta name="ICBM" content="-5.475193, 122.588271" />
 
 		<!-- Open Graph / Facebook (Rich Link Preview) -->
 		<meta property="og:type" content="website" />
@@ -44,6 +48,7 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteU
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:site_name" content="One Creative Bau-Bau Buton" />
+		<meta property="og:locale" content="id_ID" />
 
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
@@ -151,6 +156,7 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteU
 		  ]
 		}
 		</script>
+		<slot name="head" />
 	</head>
 	<body class="selection:bg-[#4fbed4]/20">
 		<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">

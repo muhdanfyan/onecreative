@@ -8,6 +8,33 @@ import ShareButtons from '../../components/ShareButtons.astro';
     description="Tips mendapatkan tiket pesawat murah di Bau-Bau dan cara pesan tiket kapal PELNI resmi tanpa antre. Layanan agen perjalanan terpercaya di Buton."
     ogImage="/img/product-flights.png"
 >
+    <!-- Article Schema -->
+    <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Panduan Mencari Tiket Pesawat Murah di Kota Bau-Bau dan Sekitarnya",
+      "description": "Tips mendapatkan tiket pesawat murah di Bau-Bau dan cara pesan tiket kapal PELNI resmi tanpa antre. Layanan agen perjalanan terpercaya di Buton.",
+      "image": "https://www.onecreative.id/img/product-flights.png",
+      "author": {
+        "@type": "Organization",
+        "name": "One Creative Bau-Bau"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "One Creative",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.onecreative.id/img/logo.png"
+        }
+      },
+      "datePublished": "2026-04-27",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.onecreative.id/blog/tiket-pesawat-murah-bau-bau-buton-agen-pelni"
+      }
+    }
+    </script>
     <article class="pt-32 pb-24">
         <div class="container mx-auto px-6 max-w-3xl">
             <img src="/img/product-flights.png" alt="Tiket Pesawat Murah Bau-Bau" class="w-full h-64 md:h-96 object-cover rounded-3xl mb-12 shadow-lg">

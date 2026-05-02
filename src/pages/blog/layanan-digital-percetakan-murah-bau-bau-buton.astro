@@ -8,6 +8,33 @@ import ShareButtons from '../../components/ShareButtons.astro';
     description="Layanan lengkap One Creative: Jasa print murah, cetak undangan pernikahan, tiket pesawat murah, top up game, dan ekspedisi paket di Bau-Bau Buton."
     ogImage="/img/hero-bg.png"
 >
+    <!-- Article Schema -->
+    <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Pusat Percetakan & Layanan Digital Murah di Kota Bau-Bau dan Kabupaten Buton",
+      "description": "Layanan lengkap One Creative: Jasa print murah, cetak undangan pernikahan, tiket pesawat murah, top up game, dan ekspedisi paket di Bau-Bau Buton.",
+      "image": "https://www.onecreative.id/img/hero-bg.png",
+      "author": {
+        "@type": "Organization",
+        "name": "One Creative Bau-Bau"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "One Creative",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.onecreative.id/img/logo.png"
+        }
+      },
+      "datePublished": "2026-04-29",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.onecreative.id/blog/layanan-digital-percetakan-murah-bau-bau-buton"
+      }
+    }
+    </script>
     <article class="pt-32 pb-24">
         <div class="container mx-auto px-6 max-w-3xl">
             <img src="/img/hero-bg.png" alt="Pusat Percetakan & Layanan Digital Bau-Bau" class="w-full h-64 md:h-96 object-cover rounded-3xl mb-12 shadow-lg">
