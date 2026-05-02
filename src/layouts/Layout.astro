@@ -156,6 +156,20 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteU
 		  ]
 		}
 		</script>
+
+		<!-- Breadcrumb Schema -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "BreadcrumbList",
+		  "itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Beranda",
+			"item": "https://www.onecreative.id"
+		  }]
+		}
+		</script>
 		<slot name="head" />
 	</head>
 	<body class="selection:bg-[#4fbed4]/20">
