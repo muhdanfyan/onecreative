@@ -4,10 +4,10 @@ import Layout from '../layouts/Layout.astro';
 const products = [
     {
         id: 'print-editing',
-        name: 'Print & Editing Profesional',
-        name_en: 'Professional Print & Editing',
-        desc: 'Edit dokumen, pengetikan, & cetak foto kualitas tinggi dengan teknologi laser terbaru.',
-        desc_en: 'Document editing, typing, & high-quality photo printing with latest laser technology.',
+        name: 'Print & Editing Foto Murah',
+        name_en: 'Cheap Print & Photo Editing',
+        desc: 'Edit dokumen, pengetikan, & cetak foto kualitas tinggi dengan teknologi laser terbaru di Bau-Bau.',
+        desc_en: 'Document editing, typing, & high-quality photo printing with latest laser technology in Bau-Bau.',
         price: 'Mulai Rp 1.000',
         img: '/img/product-print.png',
         btnText: 'Detail Percetakan',
@@ -28,8 +28,8 @@ const products = [
     },
     {
         id: 'digital-solution',
-        name: 'One Stop Digital',
-        name_en: 'One Stop Digital',
+        name: 'One Stop Digital Bau-Bau',
+        name_en: 'One Stop Digital Bau-Bau',
         desc: 'Pusat reservasi tiket, hotel, paket umroh, & topup e-wallet terlengkap di Bau-Bau.',
         desc_en: 'Most complete ticket reservation, hotel, umrah packages, & e-wallet top-up in Bau-Bau.',
         price: 'Layanan Lengkap',
@@ -64,7 +64,7 @@ const products = [
     },
     {
         id: 'cetak-undangan',
-        name: 'Cetak Undangan Erba',
+        name: 'Percetakan Undangan Erba',
         name_en: 'Erba Wedding Invitations',
         desc: 'Pilihan katalog undangan pernikahan & khitanan terbaru. Desain unik & berkesan.',
         desc_en: 'Latest wedding & circumcision invitation catalog options. Unique & memorable designs.',
@@ -76,8 +76,8 @@ const products = [
     },
     {
         id: 'tiket-last-minute',
-        name: 'Flight Last Minute',
-        name_en: 'Last Minute Flight',
+        name: 'Tiket Pesawat Last Minute',
+        name_en: 'Last Minute Flight Ticket',
         desc: 'Pesan tiket pesawat 60 menit sebelum take-off. Layanan eksklusif Lion Group.',
         desc_en: 'Book flight tickets 60 minutes before take-off. Exclusive Lion Group service.',
         price: '60 Menit Ready',
@@ -88,8 +88,8 @@ const products = [
     },
     {
         id: 'tiket-pesawat',
-        name: 'Tiket Pesawat Lengkap',
-        name_en: 'Complete Flight Tickets',
+        name: 'Tiket Pesawat Murah',
+        name_en: 'Cheap Flight Tickets',
         desc: 'Terbang ke rute lokal & internasional dengan pilihan maskapai terlengkap & murah.',
         desc_en: 'Fly to local & international routes with most complete & cheap airline options.',
         price: '187+ Maskapai',
@@ -100,8 +100,8 @@ const products = [
     },
     {
         id: 'pelni',
-        name: 'Tiket Kapal PELNI',
-        name_en: 'PELNI Ship Tickets',
+        name: 'Tiket Kapal Pelni Murah',
+        name_en: 'Cheap Pelni Ship Tickets',
         desc: 'Booking tiket kapal laut PELNI gampang & cepat. Cek jadwal rute Nusantara.',
         desc_en: 'Easy & fast PELNI ship ticket booking. Check Nusantara route schedules.',
         price: 'Agen Resmi',
@@ -112,8 +112,8 @@ const products = [
     },
     {
         id: 'express',
-        name: 'One Creative Express',
-        name_en: 'One Creative Express',
+        name: 'Expedisi & Pengiriman Paket',
+        name_en: 'Expedition & Package Delivery',
         desc: 'Kirim paket ke seluruh Indonesia dengan pilihan beragam ekspedisi terpercaya.',
         desc_en: 'Send packages across Indonesia with a variety of trusted expedition options.',
         price: 'Pickup Gratis',
@@ -125,28 +125,28 @@ const products = [
 ];
 ---
 
-<Layout title="One Creative — Percetakan, Tiket, & Solusi Digital Terlengkap di Bau-Bau">
+<Layout title="Percetakan & Tiket Pesawat Murah Bau-Bau Buton — One Creative (Print, Pelni, Expedisi, Foto)">
     <main>
         <!-- Hero Section -->
         <section class="relative pt-64 pb-48 px-6 overflow-hidden flex items-center min-h-[90vh]">
             <div class="absolute inset-0 z-0">
-                <img src="/img/hero-bg.png" alt="Kantor One Creative Bau-Bau" class="w-full h-full object-cover">
+                <img src="/img/hero-bg.png" alt="Percetakan Bau-Bau - Kantor One Creative Pusat Print & Tiket Murah" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
             </div>
             <div class="container mx-auto max-w-6xl text-center relative z-10 text-white">
                 <div class="inline-flex items-center gap-2 mb-8">
                     <span class="bg-white/20 text-white border border-white/30 px-3 py-1 rounded-full uppercase tracking-widest text-[10px] lang-text"
-                          data-id="Pusat Layanan Digital Bau-Bau" data-en="Bau-Bau Digital Service Center">Pusat Layanan Digital Bau-Bau</span>
+                          data-id="Percetakan Bau-Bau & Layanan Digital" data-en="Bau-Bau Digital Service Center">Percetakan Bau-Bau & Layanan Digital</span>
                 </div>
                 <h1 class="text-[56px] md:text-[80px] font-semibold leading-[1.04] tracking-[-0.8px] mb-8 max-w-4xl mx-auto lang-text"
-                    data-id="Solusi Percetakan Bau-Bau & Layanan Digital Terbaik."
-                    data-en="Bau-Bau Printing Solution & Best Digital Services.">
-                    Solusi Percetakan Bau-Bau & Layanan Digital Terbaik.
+                    data-id="Percetakan Bau-Bau & Tiket Pesawat Murah — One Creative."
+                    data-en="Bau-Bau Printing & Cheap Flight Tickets — One Creative.">
+                    Percetakan Bau-Bau & Tiket Pesawat Murah — One Creative.
                 </h1>
                 <p class="text-[20px] text-white/80 mb-12 max-w-2xl mx-auto leading-[1.5] lang-text"
-                   data-id="PT. ONE CREATIVE AIO: Partner terpercaya untuk Cetak Undangan Pernikahan Bau-Bau, Tiket Pesawat Murah, Top Up Game Instan, dan Pengiriman Paket Ekspedisi."
-                   data-en="PT. ONE CREATIVE AIO: Trusted partner for Bau-Bau Wedding Invitations, Cheap Flight Tickets, Instant Game Top Up, and Expedition Package Delivery.">
-                    PT. ONE CREATIVE AIO: Partner terpercaya untuk <strong>Cetak Undangan Pernikahan Bau-Bau</strong>, Tiket Pesawat Murah, Top Up Game Instan, dan Pengiriman Paket Ekspedisi.
+                   data-id="Percetakan Bau-Bau terbaik dari PT. ONE CREATIVE AIO: Jasa Print, Tiket Pelni, Tiket Pesawat Murah, Expedisi, dan Editing Foto terlengkap di Bau-Bau & Buton."
+                   data-en="Best Bau-Bau Printing from PT. ONE CREATIVE AIO: Print, Pelni Tickets, Cheap Flight Tickets, Expedition, and Photo Editing services in Bau-Bau & Buton.">
+                    <strong>Percetakan Bau-Bau</strong> adalah layanan utama dari PT. ONE CREATIVE AIO. Kami menyediakan jasa Print, Tiket Pelni, Tiket Pesawat Murah, Expedisi, dan Editing Foto terlengkap di Bau-Bau & Buton.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="#layanan" class="btn-primary text-white px-10 py-4 font-semibold text-lg shadow-xl shadow-[#4fbed4]/20 lang-text"
@@ -171,12 +171,20 @@ const products = [
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
                     <article class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
-                        <div><div class="text-2xl mb-8" role="img" aria-label="Ikon Keuangan">💸</div><h3 class="text-[32px] font-medium mb-4 lang-text" data-id="Keuangan & PPOB Bau-Bau" data-en="Finance & PPOB Bau-Bau">Keuangan & PPOB Bau-Bau</h3><p class="text-slate-500 text-lg lang-text" data-id="Layanan transfer antar bank, pembayaran listrik, air, dan iuran BPJS tercepat." data-en="Interbank transfer services, electricity, water, and BPJS contribution payments.">Layanan transfer antar bank, pembayaran listrik, air, dan iuran BPJS tercepat.</p></div>
+                        <div>
+                            <div class="text-2xl mb-8" role="img" aria-label="Ikon Keuangan">💸</div>
+                            <h3 class="text-[32px] font-medium mb-4 lang-text" data-id="Top Up Game Bau-Bau & Keuangan" data-en="Bau-Bau Game Top Up & Finance">Top Up Game Bau-Bau & Keuangan</h3>
+                            <p class="text-slate-500 text-lg lang-text" data-id="Layanan Top Up Game Bau-Bau termurah, transfer antar bank, dan pembayaran tagihan instan." data-en="Cheapest Bau-Bau Game Top Up, interbank transfer, and instant bill payments.">Layanan <strong>Top Up Game Bau-Bau</strong> termurah, transfer antar bank, dan pembayaran tagihan instan.</p>
+                        </div>
                         <div class="pt-6 border-t border-slate-100 text-xs font-bold uppercase tracking-widest text-slate-300 lang-text" data-id="Pembayaran Instan" data-en="Instant Payment">Pembayaran Instan</div>
                     </article>
                     <article class="card-wf p-10 bg-white flex flex-col justify-between h-[400px]">
-                        <div><div class="text-2xl mb-8" role="img" aria-label="Ikon Logistik">📦</div><h3 class="text-[32px] font-medium mb-4 lang-text" data-id="Logistik & Travel" data-en="Logistics & Travel">Logistik & Travel</h3><p class="text-slate-500 text-lg lang-text" data-id="Kirim paket ekspedisi & booking tiket pesawat/kapal PELNI tanpa antre." data-en="Send expedition packages & book flight/PELNI ship tickets without queuing.">Kirim paket ekspedisi & booking tiket pesawat/kapal PELNI tanpa antre.</p></div>
-                        <div class="pt-6 border-t border-slate-100 text-xs font-bold uppercase tracking-widest text-slate-300 lang-text" data-id="Pengiriman Cepat" data-en="Fast Delivery">Pengiriman Cepat</div>
+                        <div>
+                            <div class="text-2xl mb-8" role="img" aria-label="Ikon Logistik">📦</div>
+                            <h3 class="text-[32px] font-medium mb-4 lang-text" data-id="Tiket Pesawat Murah Bau-Bau & Pelni" data-en="Cheap Bau-Bau Flight Tickets & Pelni">Tiket Pesawat Murah Bau-Bau & Pelni</h3>
+                            <p class="text-slate-500 text-lg lang-text" data-id="Pesan Tiket Pesawat Murah Bau-Bau rute domestik/internasional dan Agen Tiket Pelni resmi." data-en="Book Cheap Bau-Bau Flight Tickets for domestic/international routes and official Pelni Agent.">Pesan <strong>Tiket Pesawat Murah Bau-Bau</strong> rute domestik/internasional dan Agen Tiket Pelni resmi.</p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-100 text-xs font-bold uppercase tracking-widest text-slate-300 lang-text" data-id="Agen Resmi" data-en="Official Agent">Agen Resmi</div>
                     </article>
                 </div>
             </div>
@@ -295,8 +303,12 @@ const products = [
             <div class="flex justify-center gap-10 mb-12">
                 <a href="https://instagram.com/onecreative.id" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">Instagram</a>
                 <a href="https://www.facebook.com/onecreativeaio" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">Facebook</a>
+                <a href="/sitemap-index.xml" class="text-slate-400 hover:text-white transition-colors">Sitemap</a>
             </div>
-            <p class="text-slate-400 text-sm">&copy; 2026 One Creative ID. <span class="lang-text" data-id="Solusi Digital Terpercaya di Bau-Bau." data-en="Trusted Digital Solution in Bau-Bau.">Solusi Digital Terpercaya di Bau-Bau.</span></p>
+            <p class="text-slate-400 text-sm mb-4">&copy; 2026 One Creative ID. <span class="lang-text" data-id="Solusi Digital Terpercaya di Bau-Bau." data-en="Trusted Digital Solution in Bau-Bau.">Solusi Digital Terpercaya di Bau-Bau.</span></p>
+            <p class="text-slate-800 text-[10px] max-w-2xl mx-auto">
+                Keywords: Print, percetakan, tiket, Pelni, Expedisi, pesawat, editing, foto, murah, baubau, buton, murah, One Creative, percetakan bau-bau, digital printing bau-bau, cetak undangan bau-bau, tiket pesawat murah bau-bau, agen pelni bau-bau, top up game murah bau-bau, jasa desain grafis bau-bau, ekspedisi paket bau-bau, one creative bau-bau.
+            </p>
         </div>
     </footer>
 </Layout>
