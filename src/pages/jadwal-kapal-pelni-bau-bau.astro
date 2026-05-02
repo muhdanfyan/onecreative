@@ -2,12 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 
 const schedule = [
-    { ship: 'KM Tidar', date: '2 Mei 2026', time: '03:00 WITA', route: 'Bau-Bau → Makassar – Surabaya' },
-    { ship: 'KM Labobar', date: '6 Mei 2026', time: 'Estimasi Pagi', route: 'Bau-Bau → Makassar – Surabaya – Jakarta' },
-    { ship: 'KM Dobonsolo', date: '6 Mei 2026', time: '09:00 WITA', route: 'Bau-Bau → Makassar – Surabaya – Jakarta' },
-    { ship: 'KM Leuser', date: '10 Mei 2026', time: '10:00 WITA', route: 'Bau-Bau → Makassar – Labuan Bajo – Surabaya' },
-    { ship: 'KM Jetliner', date: '6, 10, 13 Mei 2026', time: 'Pagi/Sore', route: 'Bau-Bau → Raha – Kendari (PP)' },
-    { ship: 'KM Tilongkabila', date: 'Mei 2026', time: 'Cek Berkala', route: 'Bau-Bau → Makassar – Labuan Bajo – Bali' },
+    { ship: 'KM Tidar', date: '2 Mei 2026', time: '03:00 WITA', route: 'Bau-Bau → Makassar – Surabaya (Barat)', type: 'Barat' },
+    { ship: 'KM Dobonsolo', date: '4 Mei 2026', time: '21:00 WITA', route: 'Bau-Bau → Ambon – Sorong – Jayapura (Timur)', type: 'Timur' },
+    { ship: 'KM Labobar', date: '6 Mei 2026', time: 'Estimasi Pagi', route: 'Bau-Bau → Makassar – Surabaya – Jakarta (Barat)', type: 'Barat' },
+    { ship: 'KM Ciremai', date: '7 Mei 2026', time: '14:00 WITA', route: 'Bau-Bau → Ambon – Sorong – Jayapura (Timur)', type: 'Timur' },
+    { ship: 'KM Leuser', date: '10 Mei 2026', time: '10:00 WITA', route: 'Bau-Bau → Wanci – Ambon – Timika (Timur)', type: 'Timur' },
+    { ship: 'KM Sinabung', date: '12 Mei 2026', time: '02:00 WITA', route: 'Bau-Bau → Banggai – Bitung – Ternate (Timur)', type: 'Timur' },
+    { ship: 'KM Jetliner', date: '6, 10, 13 Mei 2026', time: 'Pagi/Sore', route: 'Bau-Bau → Raha – Kendari (PP)', type: 'Lokal' },
 ];
 ---
 
@@ -68,13 +69,17 @@ const schedule = [
                                 {schedule.map((item) => (
                                     <tr class="hover:bg-slate-50/50 transition-colors">
                                         <td class="p-5">
-                                            <div class="font-bold text-[#080808]">{item.ship}</div>
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <div class="font-bold text-[#080808]">{item.ship}</div>
+                                                <span class={`text-[8px] px-1.5 py-0.5 rounded-full font-bold uppercase ${item.type === 'Timur' ? 'bg-orange-100 text-orange-600' : item.type === 'Barat' ? 'bg-blue-100 text-[#146ef5]' : 'bg-slate-100 text-slate-500'}`}>
+                                                    {item.type}
+                                                </span>
+                                            </div>
                                             <div class="text-[10px] text-slate-400 font-medium uppercase mt-0.5">{item.time}</div>
                                         </td>
                                         <td class="p-5 text-slate-600 font-medium">{item.date}</td>
                                         <td class="p-5 text-[#146ef5] font-bold">{item.route}</td>
-                                    </tr>
-                                ))}
+                                    </tr>                                ))}
                             </tbody>
                         </table>
                     </div>
