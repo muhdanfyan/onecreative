@@ -70,7 +70,7 @@ const scheduleLokal = [
 
         <div class="container mx-auto px-6 max-w-6xl relative z-10">
             <!-- Breadcrumb -->
-            <nav class="flex mb-8 text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400" aria-label="Breadcrumb">
+            <nav class="flex mb-6 md:mb-8 text-[9px] md:text-[10px] font-extrabold uppercase tracking-[0.2em] text-slate-400" aria-label="Breadcrumb">
                 <ol class="flex items-center space-x-3">
                     <li><a href="/" class="hover:text-[#146ef5] transition-colors">Beranda</a></li>
                     <li><span class="text-slate-200">/</span></li>
@@ -78,19 +78,19 @@ const scheduleLokal = [
                 </ol>
             </nav>
 
-            <header class="mb-16 text-center md:text-left">
-                <div class="inline-flex items-center gap-2 bg-[#146ef5] text-white px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 shadow-lg shadow-[#146ef5]/20">
-                    <span class="relative flex h-2 w-2">
+            <header class="mb-10 md:mb-16 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 bg-[#146ef5] text-white px-3 md:px-4 py-1 md:py-1.5 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-4 md:mb-6 shadow-lg shadow-[#146ef5]/20">
+                    <span class="relative flex h-1.5 w-1.5 md:h-2 md:w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                        <span class="relative inline-flex rounded-full h-1.5 w-1.5 md:h-2 md:w-2 bg-white"></span>
                     </span>
                     Update Mei 2026
                 </div>
-                <h1 class="text-[44px] md:text-[64px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#080808] mb-6">
+                <h1 class="text-[clamp(1.75rem,8vw,4rem)] font-bold leading-[1.1] tracking-[-0.03em] text-[#080808] mb-6">
                     Jadwal Kapal PELNI <br class="hidden md:block"/><span class="text-[#146ef5]">Baubau (Pelabuhan Murhum)</span>
                 </h1>
-                <p class="text-xl text-slate-500 max-w-2xl leading-relaxed">
-                    Informasi lengkap keberangkatan <strong class="text-slate-900">jadwal kapal PELNI Baubau</strong> ke rute <span class="text-blue-600 font-bold">Barat (Jawa/Makassar)</span> dan <span class="text-orange-600 font-bold">Timur (Maluku/Papua)</span>.
+                <p class="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed mx-auto md:mx-0">
+                    Informasi lengkap keberangkatan <strong class="text-slate-900">jadwal kapal PELNI Baubau</strong> ke rute <span class="text-blue-600 font-bold">Barat</span> dan <span class="text-orange-600 font-bold">Timur</span>.
                 </p>
             </header>
 
@@ -99,34 +99,34 @@ const scheduleLokal = [
                 <div class="bg-white p-6 md:p-12 rounded-[36px] border border-slate-50 relative overflow-hidden">
                     
                     <!-- Branding Header for Image -->
-                    <div class="flex justify-between items-center mb-12 pb-8 border-b border-slate-100">
-                        <div>
-                            <p class="text-[10px] font-bold text-[#146ef5] uppercase tracking-[0.2em] mb-2">Jadwal Keberangkatan Resmi</p>
-                            <h2 class="text-2xl font-bold text-slate-900">ONE CREATIVE BAU-BAU</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-[1.5rem] mb-[2rem] md:mb-[3rem] pb-[1.5rem] md:pb-[2rem] border-b border-slate-100">
+                        <div class="text-center sm:text-left">
+                            <p class="text-[clamp(0.5rem,1.5vw,0.625rem)] font-bold text-[#146ef5] uppercase tracking-[0.2em] mb-1">Jadwal Keberangkatan Resmi</p>
+                            <h2 class="text-[clamp(1.1rem,4vw,1.5rem)] font-bold text-slate-900 leading-none">ONE CREATIVE BAU-BAU</h2>
                         </div>
-                        <img src="/img/logo.png" alt="Logo" class="h-10 w-auto">
+                        <img src="/img/logo.png" alt="Logo" class="h-[clamp(1.5rem,5vw,2.5rem)] w-auto shrink-0">
                     </div>
 
                     <div class="grid lg:grid-cols-2 gap-12">
                         
                         <!-- Arah Barat Section -->
                         <div>
-                            <div class="flex items-center gap-3 mb-8">
-                                <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center shadow-lg">⬅️</div>
-                                <h3 class="text-xl font-bold text-slate-900">Rute Arah Barat <span class="text-sm font-normal text-slate-400 block tracking-tight">Makassar, Surabaya, Jakarta</span></h3>
+                            <div class="flex items-center gap-2 md:gap-3 mb-6 md:mb-8">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-blue-600 text-white rounded-lg md:rounded-xl flex items-center justify-center shadow-lg text-xs md:text-base">⬅️</div>
+                                <h3 class="text-base sm:text-lg md:text-xl font-bold text-slate-900">Rute Arah Barat <span class="text-[11px] sm:text-xs md:text-sm font-normal text-slate-400 block tracking-tight">Makassar, Surabaya, Jakarta</span></h3>
                             </div>
-                    <div class="space-y-4">
+                            <div class="space-y-3 md:space-y-4">
                                 {scheduleBarat.map((item) => (
-                                    <div class="group p-5 rounded-2xl border border-slate-100 bg-[#f8fafc] hover:bg-white hover:border-[#146ef5] hover:shadow-xl transition-all duration-300">
-                                        <div class="flex justify-between items-start mb-3">
-                                            <div class="font-bold text-lg text-slate-900">{item.ship}</div>
-                                            <div class="text-[10px] font-black text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md uppercase tracking-wider">Barat</div>
+                                    <div class="group p-[1.25rem] sm:p-[1.5rem] rounded-[1.25rem] border border-slate-100 bg-[#f8fafc] hover:bg-white hover:border-[#146ef5] hover:shadow-xl transition-all duration-300 overflow-hidden relative">
+                                        <div class="flex justify-between items-start gap-[0.75rem] mb-[1rem]">
+                                            <div class="font-bold text-[clamp(1rem,3.5vw,1.25rem)] text-slate-900 leading-[1.2] min-w-0 break-words">{item.ship}</div>
+                                            <div class="text-[0.625rem] font-black text-blue-600 bg-blue-50 px-[0.75rem] py-[0.35rem] rounded-md uppercase tracking-wider shrink-0">Barat</div>
                                         </div>
-                                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-3">
-                                            <div class="flex items-center gap-1.5"><span class="opacity-70">📅</span> {item.date}</div>
-                                            <div class="flex items-center gap-1.5"><span class="opacity-70">⏰</span> {item.time}</div>
+                                        <div class="flex flex-wrap items-center gap-x-[1.25rem] gap-y-[0.5rem] text-[0.85rem] md:text-[0.9375rem] text-slate-500 mb-[1rem]">
+                                            <div class="flex items-center gap-[0.5rem] whitespace-nowrap"><span class="opacity-70">📅</span> {item.date}</div>
+                                            <div class="flex items-center gap-[0.5rem] whitespace-nowrap"><span class="opacity-70">⏰</span> {item.time}</div>
                                         </div>
-                                        <div class="text-sm font-medium text-[#146ef5]">{item.route}</div>
+                                        <div class="text-[0.85rem] md:text-[0.9375rem] font-medium text-[#146ef5] leading-relaxed break-words">{item.route}</div>
                                     </div>
                                 ))}
                             </div>
@@ -134,22 +134,22 @@ const scheduleLokal = [
 
                         <!-- Arah Timur Section -->
                         <div>
-                            <div class="flex items-center gap-3 mb-8">
-                                <div class="w-10 h-10 bg-orange-500 text-white rounded-xl flex items-center justify-center shadow-lg">➡️</div>
-                                <h3 class="text-xl font-bold text-slate-900">Rute Arah Timur <span class="text-sm font-normal text-slate-400 block tracking-tight">Ambon, Sorong, Jayapura, Timika</span></h3>
+                            <div class="flex items-center gap-3 mb-6 md:mb-8">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-orange-500 text-white rounded-lg md:rounded-xl flex items-center justify-center shadow-lg text-sm md:text-base">➡️</div>
+                                <h3 class="text-lg md:text-xl font-bold text-slate-900">Rute Arah Timur <span class="text-[0.75rem] md:text-[0.875rem] font-normal text-slate-400 block tracking-tight">Ambon, Sorong, Jayapura, Timika</span></h3>
                             </div>
                             <div class="space-y-4">
                                 {scheduleTimur.map((item) => (
-                                    <div class="group p-5 rounded-2xl border border-slate-100 bg-[#f8fafc] hover:bg-white hover:border-orange-400 hover:shadow-xl transition-all duration-300">
-                                        <div class="flex justify-between items-start mb-3">
-                                            <div class="font-bold text-lg text-slate-900">{item.ship}</div>
-                                            <div class="text-[10px] font-black text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md uppercase tracking-wider">Timur</div>
+                                    <div class="group p-[1.25rem] sm:p-[1.5rem] rounded-[1.25rem] border border-slate-100 bg-[#f8fafc] hover:bg-white hover:border-orange-400 hover:shadow-xl transition-all duration-300 overflow-hidden relative">
+                                        <div class="flex justify-between items-start gap-[0.75rem] mb-[1rem]">
+                                            <div class="font-bold text-[clamp(1rem,3.5vw,1.25rem)] text-slate-900 leading-[1.2] min-w-0 break-words">{item.ship}</div>
+                                            <div class="text-[0.625rem] font-black text-orange-600 bg-orange-50 px-[0.75rem] py-[0.35rem] rounded-md uppercase tracking-wider shrink-0">Timur</div>
                                         </div>
-                                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-3">
-                                            <div class="flex items-center gap-1.5"><span class="opacity-70">📅</span> {item.date}</div>
-                                            <div class="flex items-center gap-1.5"><span class="opacity-70">⏰</span> {item.time}</div>
+                                        <div class="flex flex-wrap items-center gap-x-[1.25rem] gap-y-[0.5rem] text-[0.85rem] md:text-[0.9375rem] text-slate-500 mb-[1rem]">
+                                            <div class="flex items-center gap-[0.5rem] whitespace-nowrap"><span class="opacity-70">📅</span> {item.date}</div>
+                                            <div class="flex items-center gap-[0.5rem] whitespace-nowrap"><span class="opacity-70">⏰</span> {item.time}</div>
                                         </div>
-                                        <div class="text-sm font-medium text-orange-600">{item.route}</div>
+                                        <div class="text-[0.85rem] md:text-[0.9375rem] font-medium text-orange-600 leading-relaxed break-words">{item.route}</div>
                                     </div>
                                 ))}
                             </div>
@@ -158,91 +158,86 @@ const scheduleLokal = [
                     </div>
 
                     <!-- Local / Short Route -->
-                    <div class="mt-12 p-6 rounded-2xl bg-[#080808] text-white flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div class="flex items-center gap-4 text-center md:text-left">
-                            <div class="text-3xl">🛥️</div>
-                            <div>
-                                <h4 class="font-bold text-lg">Rute Lokal (KM Jetliner)</h4>
-                                <p class="text-slate-400 text-sm">{scheduleLokal[0].route} — {scheduleLokal[0].date}</p>
+                    <div class="mt-8 md:mt-12 p-4 md:p-6 rounded-xl md:rounded-2xl bg-[#080808] text-white flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 overflow-hidden">
+                        <div class="flex items-center gap-3 md:gap-4 text-center md:text-left min-w-0">
+                            <div class="text-2xl md:text-3xl shrink-0">🛥️</div>
+                            <div class="min-w-0">
+                                <h4 class="font-bold text-base md:text-lg truncate">Rute Lokal (KM Jetliner)</h4>
+                                <p class="text-slate-400 text-xs md:text-sm truncate">{scheduleLokal[0].route} — {scheduleLokal[0].date}</p>
                             </div>
                         </div>
-                        <div class="bg-[#ffffff1a] px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest">Wanci - Bau Bau - Raha - Kendari</div>
+                        <div class="bg-[#ffffff1a] px-3 md:px-4 py-1.5 md:py-2 rounded-lg text-[10px] md:text-xs font-bold uppercase tracking-widest text-center break-words max-w-full">Wanci - Bau Bau - Raha - Kendari</div>
                     </div>
 
                     <!-- Screenshot Footer CTA -->
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-8 mt-12 pt-12 border-t border-slate-100">
-                        <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 mt-8 md:mt-12 pt-8 md:pt-12 border-t border-slate-100 overflow-hidden w-full">
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 w-full md:w-auto">
                             <div class="text-center md:text-left">
-                                <p class="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-2">Booking via WhatsApp</p>
-                                <p class="text-xl font-bold text-slate-900">+62 857-9679-2110</p>
+                                <p class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-1 md:mb-2">Booking via WhatsApp</p>
+                                <p class="text-lg md:text-xl font-bold text-slate-900 break-all">+62 857-9679-2110</p>
                             </div>
                             <div class="text-center md:text-left">
-                                <p class="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-2">Website Resmi</p>
-                                <p class="text-xl font-bold text-slate-900">www.onecreative.id</p>
+                                <p class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-1 md:mb-2">Website Resmi</p>
+                                <p class="text-lg md:text-xl font-bold text-slate-900 break-all">onecreative.id</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-[#146ef51a] rounded-full flex items-center justify-center">
-                                <img src="/img/logo.png" alt="" class="h-5 w-auto">
+                        <div class="flex items-center gap-3 shrink-0">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-[#146ef51a] rounded-full flex items-center justify-center shrink-0">
+                                <img src="/img/logo.png" alt="" class="h-4 md:h-5 w-auto">
                             </div>
-                            <span class="text-sm font-bold text-slate-800">Agen Resmi Tiket Kapal PELNI</span>
+                            <span class="text-xs md:text-sm font-bold text-slate-800 whitespace-nowrap">Agen Resmi Tiket Pelni</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Interaction Buttons -->
-            <div class="flex flex-wrap gap-6 justify-center">
-                <button id="btn-screenshot" class="group bg-[#080808] text-white px-12 py-6 rounded-2xl font-bold text-xl hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center gap-4 shadow-2xl">
-                    <span id="btn-icon" class="text-3xl">📸</span> 
-                    <span id="btn-text">Simpan & Bagikan Jadwal</span>
+            <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center px-4">
+                <button id="btn-screenshot" class="group bg-[#080808] text-white px-8 md:px-12 py-4 md:py-6 rounded-xl md:rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.03] active:scale-[0.97] transition-all flex items-center justify-center gap-3 md:gap-4 shadow-2xl">
+                    <span id="btn-icon" class="text-2xl md:text-3xl">📸</span> 
+                    <span id="btn-text">Simpan & Bagikan</span>
                 </button>
-                <a href="https://wa.me/6285796792110?text=Halo%20One%20Creative,%20saya%20ingin%20booking%20tiket%20kapal%20PELNI" class="bg-white text-slate-900 border-2 border-slate-200 px-12 py-6 rounded-2xl font-bold text-xl hover:bg-slate-50 transition-all shadow-lg flex items-center gap-3">
-                    💬 Chat Admin
+                <a href="https://wa.me/6285796792110?text=Halo%20One%20Creative,%20saya%20ingin%20booking%20tiket%20kapal%20PELNI" class="bg-white text-slate-900 border-2 border-slate-200 px-8 md:px-12 py-4 md:py-6 rounded-xl md:rounded-2xl font-bold text-lg md:text-xl hover:bg-slate-50 transition-all shadow-lg flex items-center justify-center gap-3">
+                    <span class="text-xl">💬</span> Chat Admin
                 </a>
             </div>
 
             <!-- SEO Text Section -->
             <section class="mt-20 grid md:grid-cols-2 gap-12 text-slate-600 leading-relaxed border-t border-slate-100 pt-16">
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Cara Cek Jadwal Kapal PELNI Baubau Terbaru 2026</h2>
-                    <p class="mb-4">
-                        Mencari informasi <strong class="text-[#146ef5]">jadwal kapal PELNI Baubau</strong> kini lebih mudah melalui One Creative. Kami menyediakan update real-time untuk keberangkatan dari Pelabuhan Murhum Baubau menuju berbagai kota di Indonesia. Pastikan Anda selalu mengecek jadwal terbaru sebelum merencanakan perjalanan laut Anda.
+            <section class="mt-12 md:mt-20 grid md:grid-cols-2 gap-8 md:gap-12 text-slate-600 leading-relaxed border-t border-slate-100 pt-10 md:pt-16 px-4 md:px-0">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-4 md:mb-6">Cara Cek Jadwal Kapal PELNI Baubau Terbaru 2026</h2>
+                    <p class="mb-4 text-[15px] md:text-base text-justify md:text-left">
+                        Mencari informasi <strong class="text-[#146ef5]">jadwal kapal PELNI Baubau</strong> kini lebih mudah melalui One Creative. Kami menyediakan update real-time untuk keberangkatan dari Pelabuhan Murhum Baubau menuju berbagai kota di Indonesia.
                     </p>
-                    <p class="mb-4">
-                        Data yang kami sajikan meliputi armada kapal besar seperti <strong>KM Tidar, KM Dobonsolo, KM Dorolonda, KM Labobar,</strong> dan <strong>KM Sinabung</strong>. Setiap kapal memiliki rute spesifik yang menghubungkan Baubau dengan pusat ekonomi seperti Makassar, Surabaya, dan Jakarta.
-                    </p>
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                        <h3 class="font-bold text-blue-900 mb-2">Rute Populer dari Baubau:</h3>
-                        <ul class="text-sm space-y-1 text-blue-800">
+                    <div class="bg-blue-50 p-5 md:p-6 rounded-xl md:rounded-2xl border border-blue-100">
+                        <h3 class="font-bold text-blue-900 mb-2 text-sm md:text-base">Rute Populer:</h3>
+                        <ul class="text-xs md:text-sm space-y-1 text-blue-800">
                             <li>• Jadwal Kapal PELNI Baubau - Makassar</li>
                             <li>• Jadwal Kapal PELNI Baubau - Surabaya</li>
                             <li>• Jadwal Kapal PELNI Baubau - Ambon</li>
-                            <li>• Jadwal Kapal PELNI Baubau - Jayapura</li>
                         </ul>
                     </div>
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Agen Resmi Tiket Kapal PELNI di Baubau</h2>
-                    <p class="mb-4">
-                        Sebagai <strong class="text-slate-900">agen tiket PELNI Baubau</strong> terpercaya, One Creative memberikan solusi praktis bagi calon penumpang. Anda tidak perlu lagi mengantre lama di loket pelabuhan. Cukup hubungi kami, dan tiket elektronik (E-Ticket) resmi akan langsung kami proses.
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-4 md:mb-6">Agen Resmi Tiket Kapal PELNI di Baubau</h2>
+                    <p class="mb-4 text-[15px] md:text-base text-justify md:text-left">
+                        Sebagai <strong class="text-slate-900">agen resmi tiket pelni baubau</strong>, One Creative memberikan solusi praktis. Anda tidak perlu lagi mengantre lama di loket pelabuhan.
                     </p>
-                    <p class="mb-6">
-                        Selain melayani <strong class="text-[#146ef5]">tiket kapal pelni baubau</strong>, kami juga menyediakan informasi mengenai harga tiket terbaru, syarat perjalanan (seperti dokumen identitas), dan tips agar perjalanan Anda lebih nyaman.
-                    </p>
-                    <ul class="space-y-3 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <ul class="space-y-3 bg-white p-5 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-slate-100">
                         <li class="flex items-start gap-3">
                             <span class="text-blue-600 font-bold">📍</span>
                             <div>
-                                <strong class="text-slate-900 block">Alamat Kantor:</strong>
-                                <span class="text-sm">Jl. Gajah Mada, Lipu, Kec. Betoambari, Kota Baubau.</span>
+                                <strong class="text-slate-900 block text-sm md:text-base">Alamat Kantor:</strong>
+                                <span class="text-xs md:text-sm">Jl. Gajah Mada, Lipu, Betoambari, Baubau.</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="text-green-600 font-bold">📞</span>
                             <div>
-                                <strong class="text-slate-900 block">WhatsApp Booking:</strong>
-                                <span class="text-sm">+62 857-9679-2110 (Fast Response)</span>
+                                <strong class="text-slate-900 block text-sm md:text-base">WhatsApp:</strong>
+                                <span class="text-xs md:text-sm">+62 857-9679-2110 (Admin)</span>
                             </div>
                         </li>
                     </ul>
