@@ -233,14 +233,15 @@ const products = [
                 </div>
                 
                 <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory no-scrollbar" style="mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);">
-                    <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white p-10 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                    <!-- Andi Resky -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white p-10 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:border-[#4fbed4] transition-colors">
                         <div class="mb-8">
                             <div class="flex gap-1 mb-6">
                                 {[1, 2, 3, 4, 5].map(() => (
                                     <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 ))}
                             </div>
-                            <p class="text-slate-600 text-lg italic leading-relaxed lang-text" data-id='"Hasil cetakan dokumen dan fotonya sangat tajam, warna akurat. Pengerjaan juga sangat cepat, bisa ditunggu. Rekomendasi banget buat yang cari tempat print berkualitas di Bau-Bau."' data-en='"The document and photo print results are very sharp, colors are accurate. Work is also very fast, can be waited for. Highly recommended for those looking for quality print spots in Bau-Bau."'>"Hasil cetakan dokumen dan fotonya sangat tajam, warna akurat. Pengerjaan juga sangat cepat, bisa ditunggu. Rekomendasi banget buat yang cari tempat print berkualitas di Bau-Bau."</p>
+                            <p class="text-slate-600 text-lg italic leading-relaxed lang-text" data-id='"Hasil cetakan dokumen dan fotonya sangat tajam, warna akurat. Pengerjaan juga sangat cepat, bisa ditunggu."' data-en='"The document and photo print results are very sharp, colors are accurate. Work is also very fast, can be waited for."'>"Hasil cetakan dokumen dan fotonya sangat tajam, warna akurat. Pengerjaan juga sangat cepat, bisa ditunggu."</p>
                         </div>
                         <div class="flex items-center gap-4 pt-6 border-t border-slate-50">
                             <div class="w-12 h-12 bg-[#4fbed4]/20 rounded-full flex items-center justify-center font-bold text-[#4fbed4]">AR</div>
@@ -250,7 +251,44 @@ const products = [
                             </div>
                         </div>
                     </div>
-                    <!-- Other testimonials shortened for brevity in write_file, but logic remains same -->
+
+                    <!-- Ihsan -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white p-10 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:border-[#4fbed4] transition-colors">
+                        <div class="mb-8">
+                            <div class="flex gap-1 mb-6">
+                                {[1, 2, 3, 4, 5].map(() => (
+                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                ))}
+                            </div>
+                            <p class="text-slate-600 text-lg italic leading-relaxed lang-text" data-id='"Satu tempat untuk semua kebutuhan. Mau print dokumen atau cetak undangan pun bisa di sini."' data-en='"One place for all needs. Printing documents or wedding invitations can all be done here."'>"Satu tempat untuk semua kebutuhan. Mau print dokumen atau cetak undangan pun bisa di sini."</p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-6 border-t border-slate-50">
+                            <div class="w-12 h-12 bg-[#4fbed4]/20 rounded-full flex items-center justify-center font-bold text-[#4fbed4]">I</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Ihsan</h4>
+                                <p class="text-slate-400 text-xs uppercase tracking-widest">Pelanggan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Xiao Vann -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white p-10 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:border-[#4fbed4] transition-colors">
+                        <div class="mb-8">
+                            <div class="flex gap-1 mb-6">
+                                {[1, 2, 3, 4, 5].map(() => (
+                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                ))}
+                            </div>
+                            <p class="text-slate-600 text-lg italic leading-relaxed lang-text" data-id='"Pelayanan pembelian tiket pelni dan pesawat sangat cepat, dan respon penjual sangat baik."' data-en='"Pelni and flight ticket purchase service is very fast, and the seller response is very good."'>"Pelayanan pembelian tiket pelni dan pesawat sangat cepat, dan respon penjual sangat baik."</p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-6 border-t border-slate-50">
+                            <div class="w-12 h-12 bg-[#4fbed4]/20 rounded-full flex items-center justify-center font-bold text-[#4fbed4]">XV</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Xiao Vann</h4>
+                                <p class="text-slate-400 text-xs uppercase tracking-widest">Pelanggan</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mt-8 text-center">
@@ -290,10 +328,18 @@ const products = [
                     <div class="label-uppercase text-slate-400 mb-4 lang-text" data-id="Pertanyaan Umum (FAQ)" data-en="Frequently Asked Questions (FAQ)">Pertanyaan Umum (FAQ)</div>
                     <h2 class="text-[40px] md:text-[56px] font-semibold leading-[1.04] lang-text" data-id="Pusat Bantuan Cepat." data-en="Quick Help Center.">Pusat Bantuan Cepat.</h2>
                 </div>
-                <div class="space-y-6">
+                <div class="grid gap-6">
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
                         <h3 class="text-xl font-bold mb-3 text-slate-900 lang-text" data-id="Dimana lokasi percetakan One Creative di Bau-Bau?" data-en="Where is One Creative printing location in Bau-Bau?">Dimana lokasi percetakan One Creative di Bau-Bau?</h3>
-                        <p class="text-slate-600 leading-relaxed lang-text" data-id="Kantor pusat One Creative terletak strategis di Jl. Gajah Mada, Lipu." data-en="One Creative headquarters is strategically located on Jl. Gajah Mada, Lipu.">Kantor pusat One Creative terletak strategis di Jl. Gajah Mada, Lipu.</p>
+                        <p class="text-slate-600 leading-relaxed lang-text" data-id="Kantor pusat One Creative terletak strategis di Jl. Gajah Mada, Lipu, Kec. Betoambari, Bau-Bau." data-en="One Creative headquarters is strategically located on Jl. Gajah Mada, Lipu, Betoambari, Bau-Bau.">Kantor pusat One Creative terletak strategis di Jl. Gajah Mada, Lipu, Kec. Betoambari, Bau-Bau.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <h3 class="text-xl font-bold mb-3 text-slate-900 lang-text" data-id="Apakah One Creative agen resmi tiket PELNI?" data-en="Is One Creative an official PELNI ticket agent?">Apakah One Creative agen resmi tiket PELNI?</h3>
+                        <p class="text-slate-600 leading-relaxed lang-text" data-id="Ya, kami adalah agen resmi yang melayani pemesanan tiket kapal laut PELNI tanpa perlu antre." data-en="Yes, we are an official agent serving PELNI ship ticket bookings without queuing.">Ya, kami adalah agen resmi yang melayani pemesanan tiket kapal laut PELNI tanpa perlu antre.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <h3 class="text-xl font-bold mb-3 text-slate-900 lang-text" data-id="Layanan top up game apa saja yang tersedia?" data-en="What game top-up services are available?">Layanan top up game apa saja yang tersedia?</h3>
+                        <p class="text-slate-600 leading-relaxed lang-text" data-id="Kami melayani top up Diamond MLBB, FreeFire, PUBG, hingga voucher Steam Wallet secara instan." data-en="We serve MLBB Diamond, FreeFire, PUBG, and Steam Wallet voucher top-ups instantly.">Kami melayani top up Diamond MLBB, FreeFire, PUBG, hingga voucher Steam Wallet secara instan.</p>
                     </div>
                 </div>
             </div>

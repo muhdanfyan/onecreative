@@ -27,11 +27,37 @@ const scheduleLokal = [
 ---
 
 <Layout 
-    title="Jadwal Kapal PELNI Bau-Bau (Barat & Timur) Mei 2026 Terbaru — One Creative"
-    description="Update Jadwal Kapal PELNI Pelabuhan Murhum Bau-Bau Mei 2026 Lengkap. Rute Barat (Makassar/Jawa) & Timur (Ambon/Papua). Agen Resmi One Creative."
+    title="Jadwal Kapal PELNI Baubau Mei 2026 Terbaru & Terlengkap — One Creative"
+    description="Update Jadwal Kapal PELNI Pelabuhan Murhum Baubau Mei 2026 Lengkap. Rute Barat (Makassar, Surabaya, Jakarta) & Timur (Ambon, Sorong, Jayapura). Agen Resmi One Creative."
 >
     <Fragment slot="head">
         <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
+        
+        <!-- Structured Data for Schedule Table -->
+        <script type="application/ld+json" define:vars={{ scheduleBarat, scheduleTimur }}>
+        {
+          "@context": "https://schema.org",
+          "@type": "Dataset",
+          "name": "Jadwal Kapal PELNI Baubau Mei 2026",
+          "description": "Jadwal keberangkatan kapal PELNI dari Pelabuhan Murhum Baubau ke rute Barat dan Timur.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "One Creative Bau-Bau"
+          },
+          "hasPart": [
+            {
+              "@type": "Dataset",
+              "name": "Rute Barat (Makassar, Surabaya, Jakarta)",
+              "description": "Jadwal kapal PELNI Baubau arah Barat"
+            },
+            {
+              "@type": "Dataset",
+              "name": "Rute Timur (Ambon, Papua)",
+              "description": "Jadwal kapal PELNI Baubau arah Timur"
+            }
+          ]
+        }
+        </script>
     </Fragment>
 
     <main class="pt-32 pb-24 bg-[#fcfcfc] min-h-screen relative overflow-hidden">
@@ -48,7 +74,7 @@ const scheduleLokal = [
                 <ol class="flex items-center space-x-3">
                     <li><a href="/" class="hover:text-[#146ef5] transition-colors">Beranda</a></li>
                     <li><span class="text-slate-200">/</span></li>
-                    <li class="text-slate-900">Jadwal Kapal Pelni</li>
+                    <li class="text-slate-900">Jadwal Kapal Pelni Baubau</li>
                 </ol>
             </nav>
 
@@ -61,10 +87,10 @@ const scheduleLokal = [
                     Update Mei 2026
                 </div>
                 <h1 class="text-[44px] md:text-[64px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#080808] mb-6">
-                    Jadwal Kapal PELNI <br class="hidden md:block"/><span class="text-[#146ef5]">Pelabuhan Murhum Bau-Bau</span>
+                    Jadwal Kapal PELNI <br class="hidden md:block"/><span class="text-[#146ef5]">Baubau (Pelabuhan Murhum)</span>
                 </h1>
                 <p class="text-xl text-slate-500 max-w-2xl leading-relaxed">
-                    Informasi lengkap keberangkatan kapal ke arah <span class="text-blue-600 font-bold">Barat (Jawa/Makassar)</span> dan <span class="text-orange-600 font-bold">Timur (Maluku/Papua)</span>.
+                    Informasi lengkap keberangkatan <strong class="text-slate-900">jadwal kapal PELNI Baubau</strong> ke rute <span class="text-blue-600 font-bold">Barat (Jawa/Makassar)</span> dan <span class="text-orange-600 font-bold">Timur (Maluku/Papua)</span>.
                 </p>
             </header>
 
@@ -89,9 +115,9 @@ const scheduleLokal = [
                                 <div class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center shadow-lg">⬅️</div>
                                 <h3 class="text-xl font-bold text-slate-900">Rute Arah Barat <span class="text-sm font-normal text-slate-400 block tracking-tight">Makassar, Surabaya, Jakarta</span></h3>
                             </div>
-                            <div class="space-y-4">
+                    <div class="space-y-4">
                                 {scheduleBarat.map((item) => (
-                                    <div class="group p-5 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-[#146ef5] hover:shadow-xl transition-all duration-300">
+                                    <div class="group p-5 rounded-2xl border border-slate-100 bg-[#f8fafc] hover:bg-white hover:border-[#146ef5] hover:shadow-xl transition-all duration-300">
                                         <div class="flex justify-between items-start mb-3">
                                             <div class="font-bold text-lg text-slate-900">{item.ship}</div>
                                             <div class="text-[10px] font-black text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md uppercase tracking-wider">Barat</div>
@@ -114,7 +140,7 @@ const scheduleLokal = [
                             </div>
                             <div class="space-y-4">
                                 {scheduleTimur.map((item) => (
-                                    <div class="group p-5 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-orange-400 hover:shadow-xl transition-all duration-300">
+                                    <div class="group p-5 rounded-2xl border border-slate-100 bg-[#f8fafc] hover:bg-white hover:border-orange-400 hover:shadow-xl transition-all duration-300">
                                         <div class="flex justify-between items-start mb-3">
                                             <div class="font-bold text-lg text-slate-900">{item.ship}</div>
                                             <div class="text-[10px] font-black text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md uppercase tracking-wider">Timur</div>
@@ -140,7 +166,7 @@ const scheduleLokal = [
                                 <p class="text-slate-400 text-sm">{scheduleLokal[0].route} — {scheduleLokal[0].date}</p>
                             </div>
                         </div>
-                        <div class="bg-white/10 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest">Wanci - Bau Bau - Raha - Kendari</div>
+                        <div class="bg-[#ffffff1a] px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest">Wanci - Bau Bau - Raha - Kendari</div>
                     </div>
 
                     <!-- Screenshot Footer CTA -->
@@ -150,7 +176,7 @@ const scheduleLokal = [
                             <p class="text-xl font-bold text-slate-900">+62 857-9679-2110</p>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-[#146ef5]/10 rounded-full flex items-center justify-center">
+                            <div class="w-12 h-12 bg-[#146ef51a] rounded-full flex items-center justify-center">
                                 <img src="/img/logo.png" alt="" class="h-5 w-auto">
                             </div>
                             <span class="text-sm font-bold text-slate-800">Agen Resmi Tiket Kapal PELNI</span>
@@ -170,11 +196,135 @@ const scheduleLokal = [
                 </a>
             </div>
 
+            <!-- SEO Text Section -->
+            <section class="mt-20 grid md:grid-cols-2 gap-12 text-slate-600 leading-relaxed border-t border-slate-100 pt-16">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Cara Cek Jadwal Kapal PELNI Baubau Terbaru 2026</h2>
+                    <p class="mb-4">
+                        Mencari informasi <strong class="text-[#146ef5]">jadwal kapal PELNI Baubau</strong> kini lebih mudah melalui One Creative. Kami menyediakan update real-time untuk keberangkatan dari Pelabuhan Murhum Baubau menuju berbagai kota di Indonesia. Pastikan Anda selalu mengecek jadwal terbaru sebelum merencanakan perjalanan laut Anda.
+                    </p>
+                    <p class="mb-4">
+                        Data yang kami sajikan meliputi armada kapal besar seperti <strong>KM Tidar, KM Dobonsolo, KM Dorolonda, KM Labobar,</strong> dan <strong>KM Sinabung</strong>. Setiap kapal memiliki rute spesifik yang menghubungkan Baubau dengan pusat ekonomi seperti Makassar, Surabaya, dan Jakarta.
+                    </p>
+                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                        <h3 class="font-bold text-blue-900 mb-2">Rute Populer dari Baubau:</h3>
+                        <ul class="text-sm space-y-1 text-blue-800">
+                            <li>• Jadwal Kapal PELNI Baubau - Makassar</li>
+                            <li>• Jadwal Kapal PELNI Baubau - Surabaya</li>
+                            <li>• Jadwal Kapal PELNI Baubau - Ambon</li>
+                            <li>• Jadwal Kapal PELNI Baubau - Jayapura</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Agen Resmi Tiket Kapal PELNI di Baubau</h2>
+                    <p class="mb-4">
+                        Sebagai <strong class="text-slate-900">agen tiket PELNI Baubau</strong> terpercaya, One Creative memberikan solusi praktis bagi calon penumpang. Anda tidak perlu lagi mengantre lama di loket pelabuhan. Cukup hubungi kami, dan tiket elektronik (E-Ticket) resmi akan langsung kami proses.
+                    </p>
+                    <p class="mb-6">
+                        Selain melayani <strong class="text-[#146ef5]">tiket kapal pelni baubau</strong>, kami juga menyediakan informasi mengenai harga tiket terbaru, syarat perjalanan (seperti dokumen identitas), dan tips agar perjalanan Anda lebih nyaman.
+                    </p>
+                    <ul class="space-y-3 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-600 font-bold">📍</span>
+                            <div>
+                                <strong class="text-slate-900 block">Alamat Kantor:</strong>
+                                <span class="text-sm">Jl. Gajah Mada, Lipu, Kec. Betoambari, Kota Baubau.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold">📞</span>
+                            <div>
+                                <strong class="text-slate-900 block">WhatsApp Booking:</strong>
+                                <span class="text-sm">+62 857-9679-2110 (Fast Response)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="mt-20">
+                <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Apa Kata Mereka Tentang Layanan Kami?</h2>
+                <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory no-scrollbar">
+                    <div class="min-w-[320px] snap-center bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <div class="flex gap-1 mb-4 text-yellow-400">
+                            {[1,2,3,4,5].map(() => <span class="text-lg">★</span>)}
+                        </div>
+                        <p class="text-slate-600 italic mb-6">"Pelayanan pembelian tiket PELNI sangat cepat, respon admin di WA juga ramah. Gak perlu capek antre di pelabuhan lagi."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600 text-sm">CC</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Ceica Cantika</h4>
+                                <p class="text-slate-400 text-xs">Pelanggan Setia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-w-[320px] snap-center bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <div class="flex gap-1 mb-4 text-yellow-400">
+                            {[1,2,3,4,5].map(() => <span class="text-lg">★</span>)}
+                        </div>
+                        <p class="text-slate-600 italic mb-6">"Bisa jadi opsi untuk pemesanan tiket secara online, tidak perlu lagi ke pelabuhan. Langsung diproses dan tiket aman."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center font-bold text-orange-600 text-sm">UR</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Uriel</h4>
+                                <p class="text-slate-400 text-xs">Pelanggan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-w-[320px] snap-center bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <div class="flex gap-1 mb-4 text-yellow-400">
+                            {[1,2,3,4,5].map(() => <span class="text-lg">★</span>)}
+                        </div>
+                        <p class="text-slate-600 italic mb-6">"Sangat terbantu untuk cek jadwal kapal terbaru. Informatif dan layanannya benar-benar memuaskan."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center font-bold text-green-600 text-sm">SS</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Sahia</h4>
+                                <p class="text-slate-400 text-xs">Local Guide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="mt-20 bg-slate-50 p-8 md:p-12 rounded-[40px] border border-slate-100">
+                <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Tanya Jawab Seputar Jadwal & Tiket PELNI Baubau</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-400 transition-colors">
+                        <h3 class="font-bold text-slate-900 mb-3">Kapan jadwal kapal PELNI Baubau Mei 2026 keluar secara lengkap?</h3>
+                        <p class="text-sm">Jadwal resmi biasanya dirilis 1-2 minggu sebelum keberangkatan. One Creative selalu memperbarui data segera setelah sistem pusat PELNI merilis jadwal terbaru untuk wilayah Baubau.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-400 transition-colors">
+                        <h3 class="font-bold text-slate-900 mb-3">Bagaimana cara beli tiket PELNI Baubau secara online?</h3>
+                        <p class="text-sm">Anda bisa mengirimkan foto KTP/SIM melalui WhatsApp ke nomor admin One Creative. Kami akan mengecek ketersediaan kursi dan memproses pembayaran secara digital.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-400 transition-colors">
+                        <h3 class="font-bold text-slate-900 mb-3">Berapa harga tiket kapal PELNI dari Baubau ke Makassar?</h3>
+                        <p class="text-sm">Harga tiket bervariasi tergantung usia (Dewasa/Bayi) dan kelas. Silakan hubungi admin kami untuk mendapatkan rincian harga tiket kapal laut terbaru.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-400 transition-colors">
+                        <h3 class="font-bold text-slate-900 mb-3">Dimana lokasi Pelabuhan Murhum di Baubau?</h3>
+                        <p class="text-sm">Pelabuhan Murhum terletak di pusat Kota Baubau. Ini adalah pelabuhan utama untuk semua kapal PELNI rute Nusantara yang singgah di Pulau Buton.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-400 transition-colors">
+                        <h3 class="font-bold text-slate-900 mb-3">Apakah tiket yang dibeli di One Creative bisa langsung digunakan?</h3>
+                        <p class="text-sm">Ya, tiket yang kami berikan adalah tiket elektronik resmi. Anda cukup menunjukkannya atau mencetaknya saat proses boarding di pelabuhan.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-400 transition-colors">
+                        <h3 class="font-bold text-slate-900 mb-3">Apakah One Creative melayani pengiriman paket via PELNI?</h3>
+                        <p class="text-sm">Tentu, selain tiket penumpang, kami juga melayani jasa ekspedisi logistik untuk pengiriman paket barang ke berbagai rute tujuan kapal PELNI.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- Detail Product Link -->
-            <div class="mt-32 max-w-3xl mx-auto text-center">
-                <h3 class="text-2xl font-bold mb-8">Butuh Informasi Lengkap Persyaratan Kapal?</h3>
-                <a href="/produk/pelni" class="inline-flex items-center gap-4 p-2 pl-6 bg-white border border-slate-100 rounded-full shadow-lg hover:shadow-xl transition-all group">
-                    <span class="font-bold text-slate-700">Lihat Detail Layanan Tiket PELNI</span>
+            <div class="mt-24 max-w-3xl mx-auto text-center">
+                <h3 class="text-2xl font-bold mb-8 text-slate-900">Butuh Informasi Persyaratan & Harga Tiket?</h3>
+                <a href="/produk/pelni" class="inline-flex items-center gap-4 p-2 pl-6 bg-white border border-slate-200 rounded-full shadow-lg hover:shadow-xl transition-all group">
+                    <span class="font-bold text-slate-700">Lihat Detail Layanan Tiket PELNI One Creative</span>
                     <div class="w-10 h-10 bg-[#146ef5] text-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">→</div>
                 </a>
             </div>
@@ -200,12 +350,69 @@ const scheduleLokal = [
 
                 try {
                     const captureArea = document.getElementById('capture-area');
+                    
+                    // Surgical Option: Replace oklch strings in all stylesheets with RGB
+                    const styleBackups = [];
+                    const sanitizeStyles = () => {
+                        const styleTags = document.querySelectorAll('style');
+                        styleTags.forEach(tag => {
+                            styleBackups.push({ tag, content: tag.innerHTML });
+                            if (tag.innerHTML.includes('oklch')) {
+                                // Simple regex to replace oklch with a neutral color or try to resolve it
+                                // For simplicity and stability, we'll replace the problematic function 
+                                // names so the parser doesn't trip, or just provide a fallback.
+                                tag.innerHTML = tag.innerHTML.replace(/oklch\([^)]+\)/g, 'rgb(0,0,0)');
+                            }
+                        });
+                    };
+                    
+                    sanitizeStyles();
+
+                    // Bake computed colors into inline styles to preserve the actual colors
+                    const elements = captureArea.querySelectorAll('*');
+                    const originalStyles = [];
+                    elements.forEach(el => {
+                        const style = window.getComputedStyle(el);
+                        const forceRgb = (colorStr) => {
+                            if (colorStr && (colorStr.includes('oklch') || colorStr.includes('oklab') || colorStr.includes('color-mix'))) {
+                                const temp = document.createElement('div');
+                                temp.style.color = colorStr;
+                                document.body.appendChild(temp);
+                                const resolved = window.getComputedStyle(temp).color;
+                                document.body.removeChild(temp);
+                                return resolved;
+                            }
+                            return colorStr;
+                        };
+                        
+                        originalStyles.push({
+                            el: el,
+                            color: el.style.color,
+                            bg: el.style.backgroundColor,
+                            border: el.style.borderColor
+                        });
+
+                        el.style.color = forceRgb(style.color);
+                        el.style.backgroundColor = forceRgb(style.backgroundColor);
+                        el.style.borderColor = forceRgb(style.borderColor);
+                    });
+
                     const canvas = await html2canvas(captureArea, {
-                        scale: 3, // Ultra high res for status share
+                        scale: 3,
                         useCORS: true,
                         allowTaint: true,
                         backgroundColor: '#ffffff',
-                        windowWidth: 1200, // Ensure desktop layout in screenshot
+                        windowWidth: 1200,
+                    });
+                    
+                    // Restore original styles and stylesheets
+                    originalStyles.forEach(item => {
+                        item.el.style.color = item.color;
+                        item.el.style.backgroundColor = item.bg;
+                        item.el.style.borderColor = item.border;
+                    });
+                    styleBackups.forEach(item => {
+                        item.tag.innerHTML = item.content;
                     });
                     
                     const image = canvas.toDataURL("image/png");
@@ -219,7 +426,7 @@ const scheduleLokal = [
                     alert('Gambar HD berhasil diunduh! Siap dibagikan ke WhatsApp atau Instagram.');
                 } catch (err) {
                     console.error(err);
-                    alert('Gagal mengambil screenshot. Hubungi admin.');
+                    alert('Gagal mengambil screenshot: ' + err.message);
                 } finally {
                     btn.style.opacity = '1';
                     btnIcon.innerText = '📸';
